@@ -717,6 +717,152 @@
   }
 
   /* ───────────────────────────────────────────
+     ROASTERS — sourced from
+     ─────────────────────────────────────────── */
+  .roasters {
+    background: var(--paper);
+    padding: clamp(70px, 10vh, 110px) var(--gutter);
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid var(--rule);
+  }
+  .roasters-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+  }
+  .roasters-head {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    gap: clamp(32px, 5vw, 80px);
+    align-items: end;
+    margin-bottom: 48px;
+  }
+  @media (max-width: 720px) {
+    .roasters-head { grid-template-columns: 1fr; gap: 18px; align-items: start; }
+  }
+  .roasters-head .label { display: block; margin-bottom: 14px; }
+  .roasters-head h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(34px, 4.6vw, 56px);
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    color: var(--roast);
+    text-wrap: balance;
+  }
+  .roasters-head h2 em { font-style: italic; font-weight: 300; color: var(--gold); }
+  .roasters-head .small {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(15px, 1.4vw, 17px);
+    color: var(--roast-soft);
+    line-height: 1.55;
+    max-width: 56ch;
+  }
+
+  .roasters-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  @media (max-width: 980px) { .roasters-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 600px) { .roasters-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  .roaster-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px 22px 22px;
+    border-right: 1px solid var(--rule);
+    color: var(--roast);
+    text-decoration: none;
+    transition: background 0.4s var(--ease), color 0.4s var(--ease);
+    overflow: hidden;
+  }
+  .roaster-card:last-child { border-right: none; }
+  @media (max-width: 980px) {
+    .roaster-card:nth-child(3n) { border-right: none; }
+    .roaster-card { border-bottom: 1px solid var(--rule); }
+    .roaster-card:nth-last-child(-n+2):not(:nth-child(3n+1)) { border-bottom: none; }
+  }
+  @media (max-width: 600px) {
+    .roaster-card { border-right: none; border-bottom: 1px solid var(--rule); }
+    .roaster-card:nth-child(2n) { border-right: none; }
+    .roaster-card:nth-child(odd) { border-right: 1px solid var(--rule); }
+    .roaster-card:nth-last-child(-n+1) { border-bottom: none; }
+  }
+  /* warm hover wash */
+  .roaster-card::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 50% 100%, rgba(201, 154, 62, 0.10), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s var(--ease);
+    pointer-events: none;
+  }
+  .roaster-card:hover::before { opacity: 1; }
+  .roaster-card > * { position: relative; z-index: 1; }
+
+  .roaster-card .num {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: var(--roast-faint);
+    margin-bottom: 14px;
+    transition: color 0.3s ease;
+  }
+  .roaster-card:hover .num { color: var(--gold); }
+
+  .roaster-card .name {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(20px, 1.7vw, 24px);
+    letter-spacing: -0.005em;
+    color: var(--roast);
+    line-height: 1.15;
+    margin: 0;
+  }
+  .roaster-card .loc {
+    font-family: var(--sans);
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--roast-faint);
+    line-height: 1.4;
+  }
+  .roaster-card .visit {
+    margin-top: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--sans);
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    transition: gap 0.25s var(--ease);
+  }
+  .roaster-card:hover .visit { gap: 10px; }
+
+  .roasters-foot {
+    margin-top: 32px;
+    text-align: center;
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 15px;
+    color: var(--roast-soft);
+  }
+  .roasters-foot .gold { color: var(--gold); font-style: normal; font-weight: 500; letter-spacing: 0.04em; }
+
+  /* ───────────────────────────────────────────
      MENU
      ─────────────────────────────────────────── */
   .menu {
@@ -1697,6 +1843,7 @@
   </a>
   <div class="nav-links">
     <a href="#about">About</a>
+    <a href="#roasters">Roasters</a>
     <a href="#menu">Menu</a>
     <a href="#surprise">Surprise</a>
     <a href="#updates">Updates</a>
@@ -1832,6 +1979,58 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ─── ROASTERS — sourced from ─── -->
+<section class="roasters" id="roasters">
+  <div class="roasters-inner">
+    <div class="roasters-head">
+      <div class="reveal">
+        <span class="label">sourced from</span>
+        <h2>A small circle of roasters. <em>One honest cup.</em></h2>
+      </div>
+      <p class="small reveal" style="transition-delay:0.1s">
+        We don't roast our own. We source from a handful of specialty roasters who do this better than we ever could — and pour the best of each into your cup.
+      </p>
+    </div>
+
+    <div class="roasters-grid">
+      <a class="roaster-card reveal" href="https://caarabicoffee.com/" target="_blank" rel="noopener" style="transition-delay:0.05s">
+        <span class="num">01</span>
+        <h3 class="name">Caarabi Coffee</h3>
+        <span class="loc">Delhi NCR</span>
+        <span class="visit">Visit <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="roaster-card reveal" href="https://www.dancinggoatcoffee.in/" target="_blank" rel="noopener" style="transition-delay:0.1s">
+        <span class="num">02</span>
+        <h3 class="name">Dancing Goat</h3>
+        <span class="loc">Specialty · India</span>
+        <span class="visit">Visit <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="roaster-card reveal" href="https://www.7000steps.com/" target="_blank" rel="noopener" style="transition-delay:0.15s">
+        <span class="num">03</span>
+        <h3 class="name">7000 Steps</h3>
+        <span class="loc">Shillong, Meghalaya</span>
+        <span class="visit">Visit <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="roaster-card reveal" href="https://www.baarbaracoffee.com/" target="_blank" rel="noopener" style="transition-delay:0.2s">
+        <span class="num">04</span>
+        <h3 class="name">Baarbara Estate</h3>
+        <span class="loc">Chikmagalur, Karnataka</span>
+        <span class="visit">Visit <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="roaster-card reveal" href="https://greysoul.coffee/" target="_blank" rel="noopener" style="transition-delay:0.25s">
+        <span class="num">05</span>
+        <h3 class="name">Grey Soul</h3>
+        <span class="loc">Pune, Maharashtra</span>
+        <span class="visit">Visit <span aria-hidden="true">→</span></span>
+      </a>
+    </div>
+
+    <p class="roasters-foot reveal" style="transition-delay:0.3s">
+      Plus a few more, on rotation. <span class="gold">Always single-origin.</span>
+    </p>
   </div>
 </section>
 
