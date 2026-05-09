@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 
 <head>
 	<meta charset="UTF-8" />
@@ -61,19 +61,34 @@
       "url": "https://komorebi.coffee/",
       "image": "https://komorebi.coffee/assets/hero-cold-coffee.png",
       "logo": "https://komorebi.coffee/assets/komorebi-logo.png",
-      "description": "Komorebi Kaffee is a delivery-only coffee studio in Noida serving café-style coffee made fresh with 100% Arabica coffee and no premix.",
-      "servesCuisine": ["Coffee", "Beverages", "Cafe"],
+      "description": "Komorebi Kaffee is a delivery-only café in Noida serving café-style coffee made fresh with 100% Arabica coffee and no premix.",
+      "servesCuisine": ["Coffee", "Beverages"],
       "priceRange": "₹₹",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Sector 71",
         "addressLocality": "Noida",
         "addressRegion": "Uttar Pradesh",
+        "postalCode": "201316",
         "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 28.5972146,
+        "longitude": 77.3785829
       },
       "areaServed": {
         "@type": "City",
         "name": "Noida"
       },
+      "hasMenu": { "@id": "https://komorebi.coffee/#menu" },
+      "acceptsReservations": false,
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "09:00",
+        "closes": "23:00"
+      }],
       "sameAs": [
         "https://instagram.com/komorebikaffee",
         "https://maps.app.goo.gl/2NtCbFMWKdUM2MTc6",
@@ -119,7 +134,7 @@
         },
         {
           "@type": "MenuSection",
-          "name": "Black Coffee",
+          "name": "Espresso & Black",
           "hasMenuItem": [
             {
               "@type": "MenuItem",
@@ -143,6 +158,17 @@
               "description": "Traditional South Indian filter coffee brewed strong and finished with creamy milk."
             }
           ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Surprise Brews",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Surprise Brews",
+              "description": "A rotating seasonal coffee drink from Komorebi Kaffee, available for a limited time."
+            }
+          ]
         }
       ]
     },
@@ -155,7 +181,7 @@
           "name": "Where does Komorebi Kaffee deliver?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Komorebi Kaffee is a delivery-only coffee studio in Noida. Orders are available through Zomato and Swiggy depending on live delivery availability."
+            "text": "Komorebi Kaffee is a delivery-only café in Noida. Orders are available through Zomato and Swiggy depending on live delivery availability."
           }
         },
         {
@@ -172,6 +198,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "You can order Komorebi Kaffee on Zomato or Swiggy from the order links on the website."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I see the full menu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The core Komorebi Kaffee menu is listed on the website. Final item availability may vary on Zomato and Swiggy at the time of ordering."
           }
         }
       ]
@@ -2662,7 +2696,7 @@
 		}
 
 		/* ───────────────────────────────────────────
-      SEO CONTENT — static content for search engines, hidden behind a toggle
+      FAQ / ORDER INFO — visible crawler-friendly support section
       ─────────────────────────────────────────── */
 		.seo-content {
 			background: var(--paper-warm);
@@ -3090,7 +3124,7 @@
 							</defs>
 							<text font-family="Inter, sans-serif" font-size="8" letter-spacing="2.4"
 								fill="currentColor">
-								<textPath href="#circlePath" startOffset="0">FRESH · 100% ARABICA · NO PREMIX ·
+								<textPath href="#circlePath" startOffset="0">MADE FRESH · 100% ARABICA · NO PREMIX ·
 								</textPath>
 							</text>
 						</svg>
@@ -3218,7 +3252,7 @@
 			<div class="menu-head">
 				<div class="reveal">
 					<span class="label">the menu</span>
-					<h2>Seven drinks. <em>One honest coffee.</em></h2>
+					<h2>A short menu. <em>One honest coffee.</em></h2>
 				</div>
 				<p class="small reveal" style="transition-delay:0.1s">Real coffee, made fresh, made well.</p>
 			</div>
@@ -3307,26 +3341,6 @@
 					</div>
 				</article>
 
-				<article class="card iced reveal" style="transition-delay:0.24s">
-					<div class="visual photo">
-						<img src="assets/menu-iced-americano.png"
-							alt="Iced Americano in a Komorebi cup — clean, dark espresso over ice and cold water, condensation beading on the cup"
-							loading="lazy" decoding="async" />
-					</div>
-					<div class="card-meta">
-						<h3 class="card-name">Iced Americano</h3>
-						<span class="card-tag">Iced</span>
-					</div>
-					<p class="card-desc">Double shot of fresh espresso over ice and cold water. Clean, bold, low-cal —
-						for when
-						you want coffee without milk.</p>
-					<div class="card-foot">
-						<span>100% Arabica</span>
-						<a href="https://link.zomato.com/xqzv/rshare?id=13637493530563260" target="_blank"
-							rel="noopener" class="order-link">On delivery apps <span class="arr">→</span></a>
-					</div>
-				</article>
-
 				<article class="card hot reveal" style="transition-delay:0.3s">
 					<div class="visual photo">
 						<img src="assets/menu-filter.png"
@@ -3348,7 +3362,7 @@
 
 				<article class="card iced reveal" style="transition-delay:0.36s">
 					<div class="visual photo">
-						<img src="assets/menu-iced-pour-over.png"
+						<img src="assets/menu-pour-over.png"
 							alt="Iced pour over coffee — a chemex hand-brew dripping over a glass of ice with the Komorebi crest, fresh grounds and warm light in the background"
 							loading="lazy" decoding="async" />
 					</div>
