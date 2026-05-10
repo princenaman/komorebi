@@ -3057,6 +3057,172 @@
 			}
 		}
 
+		/* ───────────────────────────────────────────
+		   HERO — ambient video
+		   ─────────────────────────────────────────── */
+		.hero-visual.has-video::before { display: none; }
+		.hero-visual.has-video { background: var(--roast); }
+		.hero-visual.has-video .hero-photo {
+			z-index: 0;
+			opacity: 0;
+			transition: opacity 0.4s var(--ease);
+		}
+		.hero-visual.has-video.video-failed .hero-photo { opacity: 1; }
+		.hero-ambient {
+			position: absolute; inset: 0;
+			width: 100%; height: 100%;
+			object-fit: cover; z-index: 0;
+			filter: saturate(1.05) contrast(1.03);
+			display: block;
+		}
+		.hero-visual.has-video::after {
+			background:
+				radial-gradient(circle at 25% 15%, rgba(255, 240, 200, 0.42), transparent 55%),
+				linear-gradient(180deg, rgba(255, 235, 195, 0) 50%, rgba(59, 42, 30, 0.40) 100%);
+		}
+		/* ───────────────────────────────────────────
+		   REVIEWS — "Loved after the first sip"
+		   ─────────────────────────────────────────── */
+		.reviews {
+			background: var(--paper-warm);
+			padding: clamp(80px, 12vh, 130px) var(--gutter);
+			position: relative; z-index: 2; overflow: hidden;
+		}
+		.reviews::before {
+			content: ""; position: absolute;
+			inset: -20% auto auto -10%;
+			width: 50vmax; height: 50vmax;
+			background: radial-gradient(circle, rgba(201, 154, 62, 0.10) 0%, transparent 55%);
+			filter: blur(20px); pointer-events: none; z-index: 0;
+		}
+		.reviews-inner { max-width: var(--max); margin: 0 auto; position: relative; z-index: 1; }
+		.reviews-head { text-align: center; max-width: 720px; margin: 0 auto 56px; }
+		.reviews-head .label { display: inline-block; margin-bottom: 14px; }
+		.reviews-head h2 {
+			font-family: var(--serif); font-weight: 400;
+			font-size: clamp(40px, 6vw, 76px);
+			line-height: 1; letter-spacing: -0.025em;
+			color: var(--roast);
+		}
+		.reviews-head h2 em { font-style: italic; font-weight: 300; color: var(--gold); }
+		.reviews-sub {
+			font-family: var(--serif); font-style: italic; font-weight: 300;
+			font-size: clamp(16px, 1.6vw, 19px);
+			color: var(--roast-soft); margin-top: 22px;
+			line-height: 1.5; text-wrap: pretty;
+		}
+		.ratings-strip {
+			display: flex; align-items: center; justify-content: center;
+			gap: clamp(28px, 5vw, 64px);
+			margin: 0 auto 64px; padding: 26px 32px;
+			background: var(--crema-light);
+			border: 1px solid var(--rule);
+			border-radius: 14px; max-width: 620px;
+		}
+		@media (max-width: 540px) { .ratings-strip { flex-direction: column; gap: 22px; padding: 22px; } }
+		.rating-block { display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; flex: 1; }
+		.rating-num {
+			font-family: var(--serif); font-weight: 400;
+			font-size: clamp(36px, 5vw, 46px);
+			line-height: 1; color: var(--roast); letter-spacing: -0.02em;
+		}
+		.rating-num em { font-style: italic; color: var(--gold); font-weight: 300; }
+		.rating-stars { font-size: 13px; letter-spacing: 0.18em; color: var(--gold); }
+		.rating-meta {
+			font-family: var(--sans); font-size: 10.5px; font-weight: 500;
+			letter-spacing: 0.2em; text-transform: uppercase; color: var(--roast-faint);
+		}
+		.rating-divider { width: 1px; align-self: stretch; background: var(--rule); }
+		@media (max-width: 540px) { .rating-divider { width: 60%; height: 1px; } }
+
+		.review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+		@media (max-width: 880px) { .review-grid { grid-template-columns: 1fr; } }
+		.review {
+			position: relative; background: var(--crema);
+			border: 1px solid var(--rule); border-radius: 12px;
+			padding: 30px 28px 24px;
+			display: flex; flex-direction: column; gap: 18px;
+			transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease), border-color 0.4s var(--ease);
+			overflow: hidden;
+		}
+		.review:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: rgba(201, 154, 62, 0.35); }
+		.review .quote-mark {
+			position: absolute; top: 14px; right: 24px;
+			font-family: var(--serif); font-style: italic;
+			font-size: 96px; line-height: 0.7;
+			color: rgba(201, 154, 62, 0.28);
+			pointer-events: none; user-select: none;
+		}
+		.review .stars { font-size: 14px; letter-spacing: 0.18em; color: var(--gold); }
+		.review blockquote {
+			font-family: var(--serif); font-weight: 400;
+			font-size: clamp(18px, 1.8vw, 22px); line-height: 1.4;
+			color: var(--roast); letter-spacing: -0.005em;
+			text-wrap: pretty; flex: 1;
+		}
+		.review-foot {
+			margin-top: auto; padding-top: 16px;
+			border-top: 1px dashed var(--rule);
+			display: flex; flex-direction: column; gap: 4px;
+		}
+		.review-foot .prod {
+			font-family: var(--sans); font-size: 12px; font-weight: 600;
+			letter-spacing: 0.02em; color: var(--roast);
+		}
+		.review-foot .src {
+			font-family: var(--sans); font-size: 10px; font-weight: 500;
+			letter-spacing: 0.2em; text-transform: uppercase;
+			color: var(--roast-faint);
+			display: inline-flex; align-items: center; gap: 8px;
+		}
+		.review-foot .src .pin { width: 4px; height: 4px; border-radius: 50%; background: var(--gold); }
+
+		.originals { margin-top: 56px; text-align: center; }
+		.originals-toggle {
+			display: inline-flex; align-items: center; gap: 12px;
+			padding: 14px 22px; background: transparent;
+			border: 1px dashed rgba(59, 42, 30, 0.28);
+			border-radius: 999px;
+			font-family: var(--sans); font-size: 11px; font-weight: 500;
+			letter-spacing: 0.2em; text-transform: uppercase;
+			color: var(--roast-soft);
+			transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+			cursor: pointer;
+		}
+		.originals-toggle:hover { border-color: var(--gold); border-style: solid; color: var(--roast); background: rgba(201, 154, 62, 0.08); }
+		.originals-toggle .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+		.originals-toggle .chev { transition: transform 0.4s var(--ease); font-size: 13px; line-height: 1; display: inline-block; }
+		.originals.open .originals-toggle .chev { transform: rotate(180deg); }
+		.originals-strip {
+			max-height: 0; overflow: hidden; opacity: 0; margin-top: 0;
+			display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
+			transition: max-height 0.65s var(--ease), opacity 0.5s var(--ease), margin-top 0.5s var(--ease);
+			text-align: left;
+		}
+		@media (max-width: 720px) { .originals-strip { grid-template-columns: 1fr; } }
+		.originals.open .originals-strip { max-height: 4000px; opacity: 1; margin-top: 36px; }
+		.shot {
+			background: #fff; border: 1px solid var(--rule);
+			border-radius: 14px; padding: 14px 14px 12px;
+			display: flex; flex-direction: column; gap: 10px;
+			transition: transform 0.3s var(--ease), border-color 0.3s ease, box-shadow 0.3s ease;
+			box-shadow: var(--shadow-sm); margin: 0;
+		}
+		.shot:hover { transform: translateY(-3px); border-color: rgba(201, 154, 62, 0.45); box-shadow: var(--shadow-md); }
+		.shot img { width: 100%; height: auto; border-radius: 8px; display: block; background: #fafafa; }
+		.shot figcaption {
+			font-family: var(--sans); font-size: 10.5px; font-weight: 500;
+			letter-spacing: 0.16em; text-transform: uppercase;
+			color: var(--roast-faint); padding: 4px 4px 0;
+		}
+		.originals-disclaimer {
+			margin-top: 24px;
+			font-family: var(--serif); font-style: italic; font-weight: 300;
+			font-size: 13px; color: var(--roast-faint);
+			max-width: 540px; margin-left: auto; margin-right: auto;
+			line-height: 1.5;
+		}
+
 		/* ─── reveal animation ─── */
 		.reveal {
 			opacity: 0;
@@ -3124,6 +3290,7 @@
 				<a href="#about">About</a>
 				<a href="#roasters">Roasters</a>
 				<a href="#menu">Menu</a>
+				<a href="#reviews">Reviews</a>
 				<a href="#surprise">Surprise</a>
 				<a href="#updates">Updates</a>
 				<a href="#order">Order</a>
@@ -3201,7 +3368,12 @@
 					</div>
 				</div>
 
-				<div class="hero-visual photo">
+				<div class="hero-visual has-video">
+					<video class="hero-ambient" autoplay muted loop playsinline preload="metadata"
+						poster="assets/hero-cold-coffee.png"
+						aria-label="Slow ambient pour of Komorebi Kaffee classic cold coffee">
+						<source src="videos/hero-video-2.mp4" type="video/mp4" />
+					</video>
 					<img class="hero-photo" src="assets/hero-cold-coffee.png"
 						alt="Komorebi Kaffee classic cold coffee in a clear cup with the brand sticker, condensation on the cup, espresso machine and dried pampas in the warm background"
 						loading="eager" fetchpriority="high" decoding="async" />
@@ -3490,6 +3662,136 @@
 				<p>Live prices and availability on the delivery apps.</p>
 				<a href="https://link.zomato.com/xqzv/rshare?id=13637493530563260" target="_blank" rel="noopener"
 					class="btn btn-primary">Order now <span class="arrow">→</span></a>
+			</div>
+		</section>
+
+		<!-- ─── REVIEWS — "Loved after the first sip" ─── -->
+		<section class="reviews" id="reviews">
+			<div class="reviews-inner">
+				<div class="reviews-head">
+					<span class="label reveal">customers</span>
+					<h2 class="reveal" style="transition-delay:0.08s">Loved after the <em>first sip.</em></h2>
+					<p class="reviews-sub reveal" style="transition-delay:0.18s">Early notes from customers ordering Komorebi Kaffee on Zomato and Swiggy.</p>
+				</div>
+
+				<div class="ratings-strip reveal" style="transition-delay:0.24s">
+					<div class="rating-block">
+						<div class="rating-num">5<em>.0</em></div>
+						<div class="rating-stars" aria-label="5 out of 5 stars">★★★★★</div>
+						<div class="rating-meta">Zomato · early reviews</div>
+					</div>
+					<div class="rating-divider" aria-hidden="true"></div>
+					<div class="rating-block">
+						<div class="rating-num">4<em>.6</em></div>
+						<div class="rating-stars" aria-label="4.6 out of 5 stars">★★★★★</div>
+						<div class="rating-meta">Swiggy · early reviews</div>
+					</div>
+				</div>
+
+				<div class="review-grid">
+					<article class="review reveal">
+						<span class="quote-mark" aria-hidden="true">“</span>
+						<div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+						<blockquote>You can feel the depth of the coffee beans used, and it was definitely not instant coffee.</blockquote>
+						<div class="review-foot">
+							<span class="prod">Vietnamese Cold Coffee · Shloka</span>
+							<span class="src"><span class="pin"></span>via Zomato</span>
+						</div>
+					</article>
+
+					<article class="review reveal" style="transition-delay:0.06s">
+						<span class="quote-mark" aria-hidden="true">“</span>
+						<div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+						<blockquote>Really loved the quality of the coffee. It's not everyday you meet people who take coffee so seriously.</blockquote>
+						<div class="review-foot">
+							<span class="prod">Vietnamese Cold Coffee · Hemant G.</span>
+							<span class="src"><span class="pin"></span>via Swiggy</span>
+						</div>
+					</article>
+
+					<article class="review reveal" style="transition-delay:0.12s">
+						<span class="quote-mark" aria-hidden="true">“</span>
+						<div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+						<blockquote>Rich and consistent. Can work on the quantity though.</blockquote>
+						<div class="review-foot">
+							<span class="prod">Classic Cold Coffee · Shreya T.</span>
+							<span class="src"><span class="pin"></span>via Zomato</span>
+						</div>
+					</article>
+
+					<article class="review reveal" style="transition-delay:0.18s">
+						<span class="quote-mark" aria-hidden="true">“</span>
+						<div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+						<blockquote>Loved the Biscoff! Had crumbs as well. A little drowned, but the taste was great.</blockquote>
+						<div class="review-foot">
+							<span class="prod">Lotus Biscoff Coffee · coffee_addict</span>
+							<span class="src"><span class="pin"></span>via Zomato</span>
+						</div>
+					</article>
+
+					<article class="review reveal" style="transition-delay:0.24s">
+						<span class="quote-mark" aria-hidden="true">“</span>
+						<div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+						<blockquote>Good coffee with a cute little note. Also appreciated the call to say the order was ready.</blockquote>
+						<div class="review-foot">
+							<span class="prod">Repeat customer · Mansi J.</span>
+							<span class="src"><span class="pin"></span>via Zomato</span>
+						</div>
+					</article>
+
+					<article class="review reveal" style="transition-delay:0.3s">
+						<span class="quote-mark" aria-hidden="true">“</span>
+						<div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+						<blockquote>Both the coffees had perfect balance of taste and flavour. Highly recommended.</blockquote>
+						<div class="review-foot">
+							<span class="prod">Cold + Vietnamese · Nimita</span>
+							<span class="src"><span class="pin"></span>via Zomato</span>
+						</div>
+					</article>
+				</div>
+
+				<div class="originals" id="originals">
+					<button class="originals-toggle" id="origToggle" type="button" aria-expanded="false" aria-controls="origStrip">
+						<span class="dot" aria-hidden="true"></span>
+						View original review screenshots
+						<span class="chev" aria-hidden="true">⌄</span>
+					</button>
+					<div class="originals-strip" id="origStrip" role="region" aria-label="Original customer review screenshots">
+						<figure class="shot">
+							<img src="assets/reviews/shloka.png" alt="Customer review by Shloka about Vietnamese Cold Coffee, 5 stars on Zomato" loading="lazy" decoding="async" />
+							<figcaption>Shloka · Vietnamese Cold · Zomato</figcaption>
+						</figure>
+						<figure class="shot">
+							<img src="assets/reviews/hemant.png" alt="Customer review by Hemant Gupta about Vietnamese Cold Coffee, 5 stars on Swiggy" loading="lazy" decoding="async" />
+							<figcaption>Hemant G. · Vietnamese Cold · Swiggy</figcaption>
+						</figure>
+						<figure class="shot">
+							<img src="assets/reviews/mansi.png" alt="Customer review by Mansi Jhamb, 5 stars on Zomato, repeat order" loading="lazy" decoding="async" />
+							<figcaption>Mansi J. · Repeat order · Zomato</figcaption>
+						</figure>
+						<figure class="shot">
+							<img src="assets/reviews/shreya.png" alt="Customer review by Shreya Tiwari about Classic Cold Coffee, 5 stars on Zomato" loading="lazy" decoding="async" />
+							<figcaption>Shreya T. · Cold Coffee · Zomato</figcaption>
+						</figure>
+						<figure class="shot">
+							<img src="assets/reviews/coffee_addict.png" alt="Customer review by coffee_addict about Lotus Biscoff Coffee, 5 stars on Zomato" loading="lazy" decoding="async" />
+							<figcaption>coffee_addict · Biscoff · Zomato</figcaption>
+						</figure>
+						<figure class="shot">
+							<img src="assets/reviews/nimita.png" alt="Customer review by Nimita about Cold and Vietnamese coffee, 5 stars on Zomato" loading="lazy" decoding="async" />
+							<figcaption>Nimita · Cold + Vietnamese · Zomato</figcaption>
+						</figure>
+						<figure class="shot">
+							<img src="assets/reviews/shoubhik.png" alt="Customer review by Shoubhik Sadhu about Vietnamese Cold Coffee on Swiggy" loading="lazy" decoding="async" />
+							<figcaption>Shoubhik S. · Vietnamese Cold · Swiggy</figcaption>
+						</figure>
+						<figure class="shot">
+							<img src="assets/reviews/prince.png" alt="Customer review by Prince Singh, 5 stars on Zomato, great aroma" loading="lazy" decoding="async" />
+							<figcaption>Prince S. · Zomato</figcaption>
+						</figure>
+					</div>
+					<p class="originals-disclaimer">Cropped from real Zomato &amp; Swiggy review screens. Customer photos &amp; order IDs hidden.</p>
+				</div>
 			</div>
 		</section>
 
@@ -3894,6 +4196,28 @@
 			});
 		}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 		reveals.forEach((el) => io.observe(el));
+
+		// pause hero ambient video when off-screen + fall back to poster image if it fails
+		document.querySelectorAll('.hero-ambient').forEach((v) => {
+			v.addEventListener('error', () => v.closest('.hero-visual')?.classList.add('video-failed'));
+			const heroIO = new IntersectionObserver((entries) => {
+				entries.forEach((e) => {
+					if (e.isIntersecting) v.play().catch(() => {});
+					else v.pause();
+				});
+			}, { threshold: 0.1 });
+			heroIO.observe(v);
+		});
+
+		// originals (review screenshots) toggle
+		const origToggle = document.getElementById('origToggle');
+		const originals = document.getElementById('originals');
+		if (origToggle && originals) {
+			origToggle.addEventListener('click', () => {
+				const open = originals.classList.toggle('open');
+				origToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+			});
+		}
 
 		// order card cursor glow
 		document.querySelectorAll('.order-card').forEach((card) => {
