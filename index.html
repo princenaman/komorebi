@@ -118,12 +118,12 @@
             {
               "@type": "MenuItem",
               "name": "Classic Cold Coffee",
-              "description": "Smooth creamy iced coffee with chilled milk and a double shot of espresso. Made fresh to order with 100% Arabica coffee and no premix."
+              "description": "Our signature creamy cold coffee, made with fresh espresso, chilled milk, and 100% Arabica coffee. No premix, no instant powder."
             },
             {
               "@type": "MenuItem",
               "name": "Vietnamese Cold Coffee",
-              "description": "Bold dark roast poured over sweet condensed milk and ice."
+              "description": "Bold espresso-style Arabica coffee over sweet condensed milk and ice. Strong, sweet, and built for Indian summer deliveries."
             },
             {
               "@type": "MenuItem",
@@ -139,7 +139,7 @@
             {
               "@type": "MenuItem",
               "name": "Iced Americano",
-              "description": "Double shot of fresh espresso over ice and cold water."
+              "description": "Fresh double-shot coffee over ice and chilled water. Clean, bold, low-calorie, and dairy-free."
             },
             {
               "@type": "MenuItem",
@@ -198,6 +198,30 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "You can order Komorebi Kaffee on Zomato or Swiggy from the order links on the website."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Komorebi Kaffee available on Zomato?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Komorebi Kaffee is live on Zomato for delivery across serviceable areas in Noida. Live prices, offers, and delivery time are shown on the Zomato listing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Komorebi Kaffee available on Swiggy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Komorebi Kaffee is also live on Swiggy. Availability depends on Swiggy serviceability in your area at the time of ordering."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What coffee should I order first?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you like creamy coffee, start with the Classic Cold Coffee. If you like strong and sweet, try the Vietnamese Cold Coffee. If you prefer black coffee, go with the Iced Americano."
           }
         },
         {
@@ -711,6 +735,18 @@
 			font-style: italic;
 			font-weight: 300;
 			color: var(--roast-soft);
+		}
+
+		.wordmark-sub {
+			display: block;
+			font-family: var(--sans);
+			font-style: normal;
+			font-weight: 500;
+			font-size: clamp(13px, 1.1vw, 15.5px);
+			letter-spacing: 0.14em;
+			text-transform: uppercase;
+			color: var(--roast-soft);
+			margin-top: 18px;
 		}
 
 		.tag {
@@ -2330,9 +2366,42 @@
 			transform: translateX(2px);
 		}
 
-		.menu-foot {
+		.first-order {
 			max-width: var(--max);
 			margin: 56px auto 0;
+			padding: 22px 26px;
+			background: var(--paper-warm);
+			border: 1px solid var(--rule);
+			border-radius: 6px;
+			display: flex;
+			align-items: baseline;
+			gap: 22px;
+			flex-wrap: wrap;
+		}
+
+		.first-order .label {
+			color: var(--gold);
+			font-weight: 600;
+			flex-shrink: 0;
+		}
+
+		.first-order p {
+			font-family: var(--serif);
+			font-size: clamp(16px, 1.4vw, 19px);
+			line-height: 1.55;
+			color: var(--roast-soft);
+			flex: 1;
+			min-width: 240px;
+		}
+
+		.first-order strong {
+			color: var(--roast);
+			font-weight: 500;
+		}
+
+		.menu-foot {
+			max-width: var(--max);
+			margin: 28px auto 0;
 			padding-top: 28px;
 			border-top: 1px solid var(--rule);
 			display: flex;
@@ -2405,6 +2474,16 @@
 			color: var(--roast-soft);
 			margin-top: 18px;
 			max-width: 280px;
+		}
+
+		.updates-updated {
+			margin-top: 12px;
+			font-family: var(--sans);
+			font-size: 11px;
+			font-weight: 500;
+			letter-spacing: 0.18em;
+			text-transform: uppercase;
+			color: var(--roast-faint);
 		}
 
 		.notes {
@@ -2754,6 +2833,16 @@
 			gap: 8px;
 		}
 
+		.faq-heading {
+			font-family: var(--serif);
+			font-weight: 400;
+			font-size: clamp(22px, 2.4vw, 30px);
+			letter-spacing: -0.01em;
+			color: var(--roast);
+			margin-top: 26px;
+			margin-bottom: 4px;
+		}
+
 		.faq-list {
 			display: grid;
 			gap: 14px;
@@ -3054,6 +3143,7 @@
 					<h1 class="wordmark">
 						Komorebi
 						<span class="second">Kaffee.</span>
+						<span class="wordmark-sub">100% Arabica Coffee Delivery in Noida</span>
 					</h1>
 
 					<p class="tag">Café-style coffee, made for slow moments.</p>
@@ -3124,7 +3214,7 @@
 							</defs>
 							<text font-family="Inter, sans-serif" font-size="8" letter-spacing="2.4"
 								fill="currentColor">
-								<textPath href="#circlePath" startOffset="0">MADE FRESH · 100% ARABICA · NO PREMIX ·
+								<textPath href="#circlePath" startOffset="0">FRESH · 100% ARABICA · NO PREMIX ·
 								</textPath>
 							</text>
 						</svg>
@@ -3164,6 +3254,10 @@
 					<h2 class="reveal" style="transition-delay:0.12s">
 						A delivery-only café built around <em>calm mornings,</em> real ingredients, and honest coffee.
 					</h2>
+					<p class="reveal" style="transition-delay:0.18s">
+						<strong>Komorebi Kaffee is a delivery-only coffee brand in Noida</strong> serving 100% Arabica
+						cold coffee, Vietnamese coffee, iced americano, filter coffee, and rotating surprise brews.
+					</p>
 					<p class="reveal" style="transition-delay:0.22s">
 						Every drink is made fresh to order using 100% Arabica — no premix, no instant, no shortcuts —
 						for people who
@@ -3242,7 +3336,8 @@
 				</div>
 
 				<p class="roasters-foot reveal" style="transition-delay:0.3s">
-					Plus a few more, on rotation. <span class="gold">Always single-origin.</span>
+					Plus a few more, on rotation. <span class="gold">Usually single-origin, depending on the roast in
+						rotation.</span>
 				</p>
 			</div>
 		</section>
@@ -3269,9 +3364,8 @@
 						<h3 class="card-name">Classic Cold Coffee</h3>
 						<span class="card-tag">Cold</span>
 					</div>
-					<p class="card-desc">Smooth, creamy iced coffee with chilled milk and a double shot of espresso.
-						Made fresh to
-						order — no premix, no instant.</p>
+					<p class="card-desc">Our signature creamy cold coffee, made with fresh espresso, chilled milk, and
+						100% Arabica coffee. No premix, no instant powder.</p>
 					<div class="card-foot">
 						<span>100% Arabica</span>
 						<a href="https://link.zomato.com/xqzv/rshare?id=13637493530563260" target="_blank"
@@ -3290,9 +3384,8 @@
 						<h3 class="card-name">Vietnamese Cold Coffee</h3>
 						<span class="card-tag">Signature</span>
 					</div>
-					<p class="card-desc">Bold dark roast poured over sweet condensed milk and ice. Strong, sweet,
-						refreshing —
-						freshly brewed Arabica, no shortcuts.</p>
+					<p class="card-desc">Bold espresso-style Arabica coffee over sweet condensed milk and ice. Strong,
+						sweet, and built for Indian summer deliveries.</p>
 					<div class="card-foot">
 						<span>strong &amp; sweet</span>
 						<a href="https://link.zomato.com/xqzv/rshare?id=13637493530563260" target="_blank"
@@ -3311,9 +3404,8 @@
 						<h3 class="card-name">Iced Americano</h3>
 						<span class="card-tag">Iced</span>
 					</div>
-					<p class="card-desc">Double shot of fresh espresso over ice and cold water. Clean, bold, low-cal —
-						for when
-						you want coffee without milk.</p>
+					<p class="card-desc">Fresh double-shot coffee over ice and chilled water. Clean, bold, low-calorie,
+						and dairy-free.</p>
 					<div class="card-foot">
 						<span>100% Arabica</span>
 						<a href="https://link.zomato.com/xqzv/rshare?id=13637493530563260" target="_blank"
@@ -3380,6 +3472,15 @@
 					</div>
 				</article>
 			</div>
+
+			<aside class="first-order reveal" aria-label="What to order first">
+				<span class="label">new here?</span>
+				<p>
+					Start with the <strong>Classic Cold Coffee</strong> if you like creamy coffee,
+					<strong>Vietnamese Cold Coffee</strong> if you like strong and sweet, or the
+					<strong>Iced Americano</strong> if you want black coffee.
+				</p>
+			</aside>
 
 			<div class="menu-foot">
 				<p>Live prices and availability on the delivery apps.</p>
@@ -3473,7 +3574,7 @@
 				<div class="surprise-feature reveal" style="transition-delay:0.2s">
 					<div class="surprise-visual">
 						<img src="assets/surprise-feature.png"
-							alt="Today's surprise brew — salted caramel cream brew in a stemless glass, whipped cream and cinnamon dust on top, soft window light"
+							alt="Salted caramel cream brew in a stemless glass with whipped cream and cinnamon dust, soft window light at Komorebi Kaffee Noida"
 							loading="lazy" decoding="async" />
 					</div>
 					<a class="surprise-today" href="https://instagram.com/komorebikaffee" target="_blank"
@@ -3507,6 +3608,9 @@
 					<p class="small reveal" style="transition-delay:0.18s">Small notes pinned to the wall. Updated
 						whenever
 						something happens.</p>
+					<p class="updates-updated reveal" style="transition-delay:0.22s">
+						<time datetime="2026-05">Updated: May 2026</time>
+					</p>
 				</div>
 				<div class="notes">
 					<article class="note reveal" style="transition-delay:0.1s">
@@ -3614,21 +3718,28 @@
 
 				<div class="seo-copy">
 					<p class="reveal" style="transition-delay:0.12s">
+						Made fresh in Sector 71, Noida. Available for delivery across serviceable areas in Noida through
+						Zomato and Swiggy — built for people looking for café-style iced coffee at home.
+					</p>
+
+					<p class="reveal" style="transition-delay:0.16s">
 						Quick answers for ordering Komorebi Kaffee on Zomato or Swiggy. Live prices, discounts, delivery
-						time, and
-						availability are shown directly on the delivery apps.
+						time, and availability are shown directly on the delivery apps.
 					</p>
 
 					<ul class="reveal" style="transition-delay:0.18s">
 						<li><strong>Order:</strong> Available on Zomato and Swiggy.</li>
-						<li><strong>Service area:</strong> Delivery-only in Noida, depending on app serviceability.</li>
+						<li><strong>Service area:</strong> Delivery-only across serviceable areas in Noida (kitchen in
+							Sector 71).</li>
 						<li><strong>Coffee:</strong> 100% Arabica, made fresh, no premix.</li>
 						<li><strong>Menu focus:</strong> cold coffee, iced americano, Vietnamese coffee, filter coffee,
 							iced pour
 							over, and rotating Surprise Brews.</li>
 					</ul>
 
-					<div class="faq-list reveal" style="transition-delay:0.24s" id="faq">
+					<h3 class="faq-heading reveal" style="transition-delay:0.22s" id="faq">Frequently Asked
+						Questions</h3>
+					<div class="faq-list reveal" style="transition-delay:0.24s">
 						<details>
 							<summary>Where does Komorebi Kaffee deliver?</summary>
 							<p>Komorebi Kaffee is delivery-only in Noida. Delivery availability depends on Zomato and
@@ -3647,6 +3758,25 @@
 							<p>You can order through the Zomato and Swiggy links on this website. Current prices and
 								offers are shown
 								on the delivery apps.</p>
+						</details>
+
+						<details>
+							<summary>Is Komorebi Kaffee available on Zomato?</summary>
+							<p>Yes. Komorebi Kaffee is live on Zomato for delivery across serviceable areas in Noida.
+								Live prices, offers, and delivery time are shown on the Zomato listing.</p>
+						</details>
+
+						<details>
+							<summary>Is Komorebi Kaffee available on Swiggy?</summary>
+							<p>Yes. Komorebi Kaffee is also live on Swiggy. Availability depends on Swiggy
+								serviceability in your area at the time of ordering.</p>
+						</details>
+
+						<details>
+							<summary>What coffee should I order first?</summary>
+							<p>If you like creamy coffee, start with the Classic Cold Coffee. If you like strong and
+								sweet, try the Vietnamese Cold Coffee. If you prefer black coffee, go with the Iced
+								Americano.</p>
 						</details>
 
 						<details>
