@@ -3221,8 +3221,12 @@
 			display: flex; flex-direction: column; gap: 8px;
 			transition: transform 0.3s var(--ease), border-color 0.3s ease, box-shadow 0.3s ease;
 			box-shadow: var(--shadow-sm); margin: 0;
+			font: inherit; color: inherit; text-align: left;
+			cursor: zoom-in; width: 100%;
+			-webkit-appearance: none; appearance: none;
 		}
-		.shot:hover { transform: translateY(-3px); border-color: rgba(201, 154, 62, 0.45); box-shadow: var(--shadow-md); }
+		.shot:hover, .shot:focus-visible { transform: translateY(-3px); border-color: rgba(201, 154, 62, 0.45); box-shadow: var(--shadow-md); }
+		.shot:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 		.shot img {
 			width: 100%; height: 200px;
 			object-fit: cover; object-position: top;
@@ -3232,6 +3236,61 @@
 			font-family: var(--sans); font-size: 9.5px; font-weight: 500;
 			letter-spacing: 0.14em; text-transform: uppercase;
 			color: var(--roast-faint); padding: 2px 4px 0;
+		}
+
+		/* ─── lightbox modal for full review screenshots ─── */
+		.lightbox {
+			position: fixed; inset: 0; margin: auto;
+			padding: 0; border: 0; background: transparent;
+			width: min(680px, 92vw); max-width: min(680px, 92vw);
+			max-height: 92vh; height: max-content;
+			color: inherit; overflow: visible;
+		}
+		.lightbox::backdrop {
+			background: rgba(28, 20, 14, 0.78);
+			backdrop-filter: blur(6px);
+			-webkit-backdrop-filter: blur(6px);
+		}
+		.lightbox[open] { animation: lightboxIn 0.22s var(--ease); }
+		@keyframes lightboxIn {
+			from { opacity: 0; transform: translateY(8px) scale(0.985); }
+			to   { opacity: 1; transform: none; }
+		}
+		.lightbox-figure {
+			position: relative; margin: 0; background: #fff;
+			border-radius: 14px; overflow: hidden;
+			box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+			display: flex; flex-direction: column;
+			max-height: 92vh;
+		}
+		.lightbox-figure img {
+			width: 100%; height: auto; max-height: calc(92vh - 56px);
+			object-fit: contain; display: block; background: #fafafa;
+		}
+		.lightbox-figure figcaption {
+			padding: 12px 18px;
+			font-family: var(--sans); font-size: 10.5px; font-weight: 500;
+			letter-spacing: 0.16em; text-transform: uppercase;
+			color: var(--roast-faint);
+			border-top: 1px solid var(--rule);
+			background: var(--paper-warm);
+		}
+		.lightbox-close {
+			position: absolute; top: 12px; right: 12px; z-index: 2;
+			width: 38px; height: 38px; border-radius: 50%;
+			background: rgba(246, 241, 232, 0.96);
+			border: 1px solid rgba(59, 42, 30, 0.18);
+			color: var(--roast); cursor: pointer;
+			display: inline-flex; align-items: center; justify-content: center;
+			font-size: 22px; line-height: 1; padding: 0;
+			box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+			transition: transform 0.2s var(--ease), background 0.2s ease;
+		}
+		.lightbox-close:hover { transform: scale(1.05); background: #fff; }
+		.lightbox-close:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+		@media (max-width: 540px) {
+			.lightbox { width: 94vw; max-width: 94vw; }
+			.lightbox-close { width: 34px; height: 34px; font-size: 20px; }
 		}
 		.originals-disclaimer {
 			margin-top: 24px;
@@ -3772,38 +3831,38 @@
 						<span class="chev" aria-hidden="true">⌄</span>
 					</button>
 					<div class="originals-strip" id="origStrip" role="region" aria-label="Original customer review screenshots">
-						<figure class="shot">
+						<button class="shot" type="button">
 							<img src="assets/reviews/shloka.png" alt="Customer review by Shloka about Vietnamese Cold Coffee, 5 stars on Zomato" loading="lazy" decoding="async" />
 							<figcaption>Shloka · Vietnamese Cold · Zomato</figcaption>
-						</figure>
-						<figure class="shot">
+						</button>
+						<button class="shot" type="button">
 							<img src="assets/reviews/hemant.png" alt="Customer review by Hemant Gupta about Vietnamese Cold Coffee, 5 stars on Swiggy" loading="lazy" decoding="async" />
 							<figcaption>Hemant G. · Vietnamese Cold · Swiggy</figcaption>
-						</figure>
-						<figure class="shot">
+						</button>
+						<button class="shot" type="button">
 							<img src="assets/reviews/mansi.png" alt="Customer review by Mansi Jhamb, 5 stars on Zomato, repeat order" loading="lazy" decoding="async" />
 							<figcaption>Mansi J. · Repeat order · Zomato</figcaption>
-						</figure>
-						<figure class="shot">
+						</button>
+						<button class="shot" type="button">
 							<img src="assets/reviews/shreya.png" alt="Customer review by Shreya Tiwari about Classic Cold Coffee, 5 stars on Zomato" loading="lazy" decoding="async" />
 							<figcaption>Shreya T. · Cold Coffee · Zomato</figcaption>
-						</figure>
-						<figure class="shot">
+						</button>
+						<button class="shot" type="button">
 							<img src="assets/reviews/coffee_addict.png" alt="Customer review by coffee_addict about Lotus Biscoff Coffee, 5 stars on Zomato" loading="lazy" decoding="async" />
 							<figcaption>coffee_addict · Biscoff · Zomato</figcaption>
-						</figure>
-						<figure class="shot">
+						</button>
+						<button class="shot" type="button">
 							<img src="assets/reviews/nimita.png" alt="Customer review by Nimita about Cold and Vietnamese coffee, 5 stars on Zomato" loading="lazy" decoding="async" />
 							<figcaption>Nimita · Cold + Vietnamese · Zomato</figcaption>
-						</figure>
-						<figure class="shot">
+						</button>
+						<button class="shot" type="button">
 							<img src="assets/reviews/shoubhik.png" alt="Customer review by Shoubhik Sadhu about Vietnamese Cold Coffee on Swiggy" loading="lazy" decoding="async" />
 							<figcaption>Shoubhik S. · Vietnamese Cold · Swiggy</figcaption>
-						</figure>
-						<figure class="shot">
+						</button>
+						<button class="shot" type="button">
 							<img src="assets/reviews/prince.png" alt="Customer review by Prince Singh, 5 stars on Zomato, great aroma" loading="lazy" decoding="async" />
 							<figcaption>Prince S. · Zomato</figcaption>
-						</figure>
+						</button>
 					</div>
 					<p class="originals-disclaimer">Cropped from real Zomato &amp; Swiggy review screens. Customer photos &amp; order IDs hidden.</p>
 				</div>
@@ -4162,6 +4221,14 @@
 		Order on Zomato <span class="arr">→</span>
 	</a>
 
+	<dialog class="lightbox" id="lightbox" aria-labelledby="lightboxCaption">
+		<button class="lightbox-close" type="button" aria-label="Close" data-lightbox-close>×</button>
+		<figure class="lightbox-figure">
+			<img id="lightboxImg" alt="" />
+			<figcaption id="lightboxCaption"></figcaption>
+		</figure>
+	</dialog>
+
 	<script>
 		// ── Lazy-load + autoplay/pause menu videos based on viewport visibility ──
 		// Videos use data-src; we only set the real src when the card nears the viewport.
@@ -4231,6 +4298,31 @@
 			origToggle.addEventListener('click', () => {
 				const open = originals.classList.toggle('open');
 				origToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+			});
+		}
+
+		// review screenshot lightbox
+		const lightbox = document.getElementById('lightbox');
+		const lightboxImg = document.getElementById('lightboxImg');
+		const lightboxCaption = document.getElementById('lightboxCaption');
+		if (lightbox && lightboxImg) {
+			document.querySelectorAll('.shot').forEach((shot) => {
+				shot.addEventListener('click', () => {
+					const img = shot.querySelector('img');
+					const cap = shot.querySelector('figcaption');
+					if (!img) return;
+					lightboxImg.src = img.currentSrc || img.src;
+					lightboxImg.alt = img.alt || '';
+					lightboxCaption.textContent = cap ? cap.textContent : '';
+					if (typeof lightbox.showModal === 'function') lightbox.showModal();
+					else lightbox.setAttribute('open', '');
+				});
+			});
+			lightbox.addEventListener('click', (e) => {
+				if (e.target.matches('[data-lightbox-close]') || e.target === lightbox) lightbox.close();
+			});
+			lightbox.addEventListener('close', () => {
+				lightboxImg.removeAttribute('src');
 			});
 		}
 
