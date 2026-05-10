@@ -4,6 +4,17 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-EYGVVZ13C2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-EYGVVZ13C2');
+	</script>
+
 	<title>Komorebi Kaffee Noida | 100% Arabica Coffee Delivery</title>
 	<meta name="description"
 		content="Komorebi Kaffee — a delivery-only café in Noida. 100% Arabica, no premix. Order on Zomato or Swiggy." />
@@ -3096,88 +3107,89 @@
 			filter: blur(20px); pointer-events: none; z-index: 0;
 		}
 		.reviews-inner { max-width: var(--max); margin: 0 auto; position: relative; z-index: 1; }
-		.reviews-head { text-align: center; max-width: 720px; margin: 0 auto 56px; }
+		.reviews-head { text-align: center; max-width: 680px; margin: 0 auto 44px; }
 		.reviews-head .label { display: inline-block; margin-bottom: 14px; }
 		.reviews-head h2 {
 			font-family: var(--serif); font-weight: 400;
-			font-size: clamp(40px, 6vw, 76px);
-			line-height: 1; letter-spacing: -0.025em;
+			font-size: clamp(34px, 4.6vw, 56px);
+			line-height: 1.04; letter-spacing: -0.02em;
 			color: var(--roast);
 		}
 		.reviews-head h2 em { font-style: italic; font-weight: 300; color: var(--gold); }
 		.reviews-sub {
 			font-family: var(--serif); font-style: italic; font-weight: 300;
-			font-size: clamp(16px, 1.6vw, 19px);
-			color: var(--roast-soft); margin-top: 22px;
+			font-size: clamp(15px, 1.4vw, 17px);
+			color: var(--roast-soft); margin-top: 18px;
 			line-height: 1.5; text-wrap: pretty;
 		}
 		.ratings-strip {
 			display: flex; align-items: center; justify-content: center;
-			gap: clamp(28px, 5vw, 64px);
-			margin: 0 auto 64px; padding: 26px 32px;
+			gap: clamp(24px, 4vw, 56px);
+			margin: 0 auto 48px; padding: 20px 28px;
 			background: var(--crema-light);
 			border: 1px solid var(--rule);
-			border-radius: 14px; max-width: 620px;
+			border-radius: 12px; max-width: 540px;
 		}
-		@media (max-width: 540px) { .ratings-strip { flex-direction: column; gap: 22px; padding: 22px; } }
-		.rating-block { display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; flex: 1; }
+		@media (max-width: 540px) { .ratings-strip { flex-direction: column; gap: 18px; padding: 20px; } }
+		.rating-block { display: flex; flex-direction: column; align-items: center; gap: 5px; text-align: center; flex: 1; }
 		.rating-num {
 			font-family: var(--serif); font-weight: 400;
-			font-size: clamp(36px, 5vw, 46px);
+			font-size: clamp(30px, 3.8vw, 38px);
 			line-height: 1; color: var(--roast); letter-spacing: -0.02em;
 		}
 		.rating-num em { font-style: italic; color: var(--gold); font-weight: 300; }
-		.rating-stars { font-size: 13px; letter-spacing: 0.18em; color: var(--gold); }
+		.rating-stars { font-size: 11px; letter-spacing: 0.18em; color: var(--gold); }
 		.rating-meta {
-			font-family: var(--sans); font-size: 10.5px; font-weight: 500;
+			font-family: var(--sans); font-size: 9.5px; font-weight: 500;
 			letter-spacing: 0.2em; text-transform: uppercase; color: var(--roast-faint);
 		}
 		.rating-divider { width: 1px; align-self: stretch; background: var(--rule); }
 		@media (max-width: 540px) { .rating-divider { width: 60%; height: 1px; } }
 
-		.review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-		@media (max-width: 880px) { .review-grid { grid-template-columns: 1fr; } }
+		.review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+		@media (max-width: 880px) { .review-grid { grid-template-columns: repeat(2, 1fr); } }
+		@media (max-width: 560px) { .review-grid { grid-template-columns: 1fr; } }
 		.review {
 			position: relative; background: var(--crema);
 			border: 1px solid var(--rule); border-radius: 12px;
-			padding: 30px 28px 24px;
-			display: flex; flex-direction: column; gap: 18px;
+			padding: 22px 22px 18px;
+			display: flex; flex-direction: column; gap: 14px;
 			transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease), border-color 0.4s var(--ease);
 			overflow: hidden;
 		}
 		.review:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: rgba(201, 154, 62, 0.35); }
 		.review .quote-mark {
-			position: absolute; top: 14px; right: 24px;
+			position: absolute; top: 10px; right: 18px;
 			font-family: var(--serif); font-style: italic;
-			font-size: 96px; line-height: 0.7;
+			font-size: 72px; line-height: 0.7;
 			color: rgba(201, 154, 62, 0.28);
 			pointer-events: none; user-select: none;
 		}
-		.review .stars { font-size: 14px; letter-spacing: 0.18em; color: var(--gold); }
+		.review .stars { font-size: 12px; letter-spacing: 0.16em; color: var(--gold); }
 		.review blockquote {
 			font-family: var(--serif); font-weight: 400;
-			font-size: clamp(18px, 1.8vw, 22px); line-height: 1.4;
-			color: var(--roast); letter-spacing: -0.005em;
+			font-size: clamp(15px, 1.3vw, 17px); line-height: 1.45;
+			color: var(--roast); letter-spacing: -0.003em;
 			text-wrap: pretty; flex: 1;
 		}
 		.review-foot {
-			margin-top: auto; padding-top: 16px;
+			margin-top: auto; padding-top: 12px;
 			border-top: 1px dashed var(--rule);
-			display: flex; flex-direction: column; gap: 4px;
+			display: flex; flex-direction: column; gap: 3px;
 		}
 		.review-foot .prod {
-			font-family: var(--sans); font-size: 12px; font-weight: 600;
+			font-family: var(--sans); font-size: 11px; font-weight: 600;
 			letter-spacing: 0.02em; color: var(--roast);
 		}
 		.review-foot .src {
-			font-family: var(--sans); font-size: 10px; font-weight: 500;
+			font-family: var(--sans); font-size: 9px; font-weight: 500;
 			letter-spacing: 0.2em; text-transform: uppercase;
 			color: var(--roast-faint);
 			display: inline-flex; align-items: center; gap: 8px;
 		}
 		.review-foot .src .pin { width: 4px; height: 4px; border-radius: 50%; background: var(--gold); }
 
-		.originals { margin-top: 56px; text-align: center; }
+		.originals { margin-top: 48px; text-align: center; }
 		.originals-toggle {
 			display: inline-flex; align-items: center; gap: 12px;
 			padding: 14px 22px; background: transparent;
@@ -3195,25 +3207,31 @@
 		.originals.open .originals-toggle .chev { transform: rotate(180deg); }
 		.originals-strip {
 			max-height: 0; overflow: hidden; opacity: 0; margin-top: 0;
-			display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
+			display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
 			transition: max-height 0.65s var(--ease), opacity 0.5s var(--ease), margin-top 0.5s var(--ease);
 			text-align: left;
 		}
-		@media (max-width: 720px) { .originals-strip { grid-template-columns: 1fr; } }
-		.originals.open .originals-strip { max-height: 4000px; opacity: 1; margin-top: 36px; }
+		@media (max-width: 960px) { .originals-strip { grid-template-columns: repeat(3, 1fr); } }
+		@media (max-width: 720px) { .originals-strip { grid-template-columns: repeat(2, 1fr); } }
+		@media (max-width: 480px) { .originals-strip { grid-template-columns: 1fr; } }
+		.originals.open .originals-strip { max-height: 4000px; opacity: 1; margin-top: 32px; }
 		.shot {
 			background: #fff; border: 1px solid var(--rule);
-			border-radius: 14px; padding: 14px 14px 12px;
-			display: flex; flex-direction: column; gap: 10px;
+			border-radius: 12px; padding: 10px 10px 8px;
+			display: flex; flex-direction: column; gap: 8px;
 			transition: transform 0.3s var(--ease), border-color 0.3s ease, box-shadow 0.3s ease;
 			box-shadow: var(--shadow-sm); margin: 0;
 		}
 		.shot:hover { transform: translateY(-3px); border-color: rgba(201, 154, 62, 0.45); box-shadow: var(--shadow-md); }
-		.shot img { width: 100%; height: auto; border-radius: 8px; display: block; background: #fafafa; }
+		.shot img {
+			width: 100%; height: 200px;
+			object-fit: cover; object-position: top;
+			border-radius: 6px; display: block; background: #fafafa;
+		}
 		.shot figcaption {
-			font-family: var(--sans); font-size: 10.5px; font-weight: 500;
-			letter-spacing: 0.16em; text-transform: uppercase;
-			color: var(--roast-faint); padding: 4px 4px 0;
+			font-family: var(--sans); font-size: 9.5px; font-weight: 500;
+			letter-spacing: 0.14em; text-transform: uppercase;
+			color: var(--roast-faint); padding: 2px 4px 0;
 		}
 		.originals-disclaimer {
 			margin-top: 24px;
@@ -3380,9 +3398,6 @@
 					<div class="hero-badge" aria-hidden="true">
 						<span>100% Arabica</span>
 						<span class="second">No Premix</span>
-					</div>
-					<div class="hero-visual-inner">
-						<span class="hero-caption">classic cold coffee · sector 71, noida</span>
 					</div>
 					<div class="brewed-stamp" aria-hidden="true">
 						<svg viewBox="0 0 100 100">
