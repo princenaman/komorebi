@@ -17,11 +17,11 @@
 
 	<title>Komorebi Kaffee Noida | 100% Arabica Coffee Delivery</title>
 	<meta name="description"
-		content="Komorebi Kaffee — a delivery-only café in Noida. 100% Arabica, no premix. Order on Zomato or Swiggy." />
+		content="Komorebi Kaffee — a delivery-only café in Noida. 100% Arabica, no premix. Order on Zomato." />
 	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 	<meta name="author" content="Komorebi Kaffee" />
 	<meta name="keywords"
-		content="Komorebi Kaffee, coffee delivery Noida, cold coffee Noida, 100% Arabica coffee, no premix coffee, Vietnamese cold coffee Noida, iced americano Noida, specialty coffee Noida, coffee near me Noida, Zomato coffee Noida, Swiggy coffee Noida" />
+		content="Komorebi Kaffee, coffee delivery Noida, cold coffee Noida, 100% Arabica coffee, no premix coffee, Vietnamese cold coffee Noida, iced americano Noida, specialty coffee Noida, coffee near me Noida, Zomato coffee Noida" />
 	<link rel="canonical" href="https://komorebi.coffee/" />
 
 	<link rel="icon" type="image/png" href="assets/komorebi-logo.png" />
@@ -33,7 +33,7 @@
 	<meta property="og:site_name" content="Komorebi Kaffee" />
 	<meta property="og:title" content="Komorebi Kaffee Noida | 100% Arabica Coffee Delivery" />
 	<meta property="og:description"
-		content="Delivery-only café-style coffee in Noida. 100% Arabica, no premix, made fresh to order. Order on Zomato or Swiggy." />
+		content="Delivery-only café-style coffee in Noida. 100% Arabica, no premix, made fresh to order. Order on Zomato." />
 	<meta property="og:url" content="https://komorebi.coffee/" />
 	<meta property="og:image" content="https://komorebi.coffee/assets/hero-cold-coffee.png" />
 	<meta property="og:image:alt"
@@ -108,17 +108,12 @@
       "sameAs": [
         "https://instagram.com/komorebikaffee",
         "https://maps.app.goo.gl/2NtCbFMWKdUM2MTc6",
-        "https://link.zomato.com/xqzv/rshare?id=13637493530563260",
-        "https://www.swiggy.com/direct/brand/777490?source=swiggy-direct&subSource=google"
+        "https://link.zomato.com/xqzv/rshare?id=13637493530563260"
       ],
       "potentialAction": [
         {
           "@type": "OrderAction",
           "target": "https://link.zomato.com/xqzv/rshare?id=13637493530563260"
-        },
-        {
-          "@type": "OrderAction",
-          "target": "https://www.swiggy.com/direct/brand/777490?source=swiggy-direct&subSource=google"
         }
       ]
     },
@@ -197,7 +192,7 @@
           "name": "Where does Komorebi Kaffee deliver?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Komorebi Kaffee is a delivery-only café in Noida. Orders are available through Zomato and Swiggy depending on live delivery availability."
+            "text": "Komorebi Kaffee is a delivery-only café in Noida. Orders are available through Zomato depending on live delivery availability."
           }
         },
         {
@@ -213,7 +208,7 @@
           "name": "How can I order Komorebi Kaffee?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You can order Komorebi Kaffee on Zomato or Swiggy from the order links on the website."
+            "text": "You can order Komorebi Kaffee on Zomato from the order links on the website."
           }
         },
         {
@@ -222,14 +217,6 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Yes. Komorebi Kaffee is live on Zomato for delivery across serviceable areas in Noida. Live prices, offers, and delivery time are shown on the Zomato listing."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is Komorebi Kaffee available on Swiggy?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Komorebi Kaffee is also live on Swiggy. Availability depends on Swiggy serviceability in your area at the time of ordering."
           }
         },
         {
@@ -245,7 +232,7 @@
           "name": "Where can I see the full menu?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The core Komorebi Kaffee menu is listed on the website. Final item availability may vary on Zomato and Swiggy at the time of ordering."
+            "text": "The core Komorebi Kaffee menu is listed on the website. Final item availability may vary on Zomato at the time of ordering."
           }
         }
       ]
@@ -733,6 +720,59 @@
 			font-size: 10.5px;
 			color: var(--roast-soft);
 			letter-spacing: 0.2em;
+		}
+
+		.relocation-banner {
+			display: grid;
+			gap: 6px;
+			max-width: 560px;
+			margin: 0 0 26px;
+			padding: 14px 18px;
+			background: rgba(255, 255, 255, 0.54);
+			border: 1px solid rgba(201, 154, 62, 0.34);
+			border-left: 4px solid var(--gold);
+			border-radius: 6px;
+			box-shadow: 0 10px 28px rgba(59, 42, 30, 0.08);
+			animation: fadeUp 1.1s var(--ease) 0.22s both;
+		}
+
+		.relocation-banner .eyebrow {
+			font-family: var(--sans);
+			font-size: 10px;
+			font-weight: 600;
+			letter-spacing: 0.18em;
+			text-transform: uppercase;
+			color: var(--gold);
+		}
+
+		.relocation-banner strong {
+			font-family: var(--serif);
+			font-size: 22px;
+			font-weight: 500;
+			line-height: 1.1;
+			color: var(--roast);
+		}
+
+		.relocation-banner p {
+			font-family: var(--sans);
+			font-size: 13px;
+			line-height: 1.5;
+			color: var(--roast-soft);
+		}
+
+		.relocation-banner .new-address {
+			font-weight: 600;
+			color: var(--roast);
+		}
+
+		@media (max-width: 560px) {
+			.relocation-banner {
+				padding: 13px 15px;
+			}
+
+			.relocation-banner strong {
+				font-size: 20px;
+			}
 		}
 
 		.wordmark {
@@ -2658,7 +2698,7 @@
 
 		.order-grid {
 			display: grid;
-			grid-template-columns: repeat(4, 1fr);
+			grid-template-columns: repeat(3, 1fr);
 			gap: 16px;
 		}
 
@@ -3389,6 +3429,13 @@
 						<span class="label">delivery only · noida</span>
 					</div>
 
+					<aside class="relocation-banner" aria-label="Relocation announcement">
+						<span class="eyebrow">new chapter brewing</span>
+						<strong>Komorebi is moving from Sector 26 to Sector 71.</strong>
+						<p>New address: <span class="new-address">Sector 71, Noida</span>. A brighter delivery kitchen,
+							the same 100% Arabica slow-coffee mood.</p>
+					</aside>
+
 					<h1 class="wordmark">
 						Komorebi
 						<span class="second">Kaffee.</span>
@@ -3415,15 +3462,6 @@
 					</div>
 
 					<div class="hero-icons">
-						<a class="icon-link"
-							href="https://www.swiggy.com/direct/brand/777490?source=swiggy-direct&subSource=google"
-							target="_blank" rel="noopener" aria-label="Order on Swiggy" title="Swiggy">
-							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
-								stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-								<path d="M5 11a7 7 0 0 1 14 0v3l2 4H3l2-4v-3z" />
-								<path d="M9 18a3 3 0 0 0 6 0" />
-							</svg>
-						</a>
 						<a class="icon-link" href="https://instagram.com/komorebikaffee" target="_blank" rel="noopener"
 							aria-label="Instagram" title="Instagram">
 							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
@@ -3549,35 +3587,45 @@
 				</div>
 
 				<div class="roasters-grid">
-					<a class="roaster-card reveal" href="https://www.dancinggoatcoffee.in/" target="_blank"
+					<a class="roaster-card reveal"
+						href="https://www.dancinggoatcoffee.in/?utm_source=komorebi.coffee&utm_medium=referral&utm_campaign=roasters&utm_content=dancing_goat"
+						target="_blank"
 						rel="noopener" style="transition-delay:0.05s">
 						<span class="num">01</span>
 						<h3 class="name">Dancing Goat</h3>
 						<span class="loc">Specialty · India</span>
 						<span class="visit">Visit <span aria-hidden="true">→</span></span>
 					</a>
-					<a class="roaster-card reveal" href="https://caarabicoffee.com/" target="_blank" rel="noopener"
+					<a class="roaster-card reveal"
+						href="https://caarabicoffee.com/?utm_source=komorebi.coffee&utm_medium=referral&utm_campaign=roasters&utm_content=caarabi_coffee"
+						target="_blank" rel="noopener"
 						style="transition-delay:0.1s">
 						<span class="num">02</span>
 						<h3 class="name">Caarabi Coffee</h3>
 						<span class="loc">Delhi NCR</span>
 						<span class="visit">Visit <span aria-hidden="true">→</span></span>
 					</a>
-					<a class="roaster-card reveal" href="https://www.7000steps.com/" target="_blank" rel="noopener"
+					<a class="roaster-card reveal"
+						href="https://www.7000steps.com/?utm_source=komorebi.coffee&utm_medium=referral&utm_campaign=roasters&utm_content=7000_steps"
+						target="_blank" rel="noopener"
 						style="transition-delay:0.15s">
 						<span class="num">03</span>
 						<h3 class="name">7000 Steps</h3>
 						<span class="loc">Shillong, Meghalaya</span>
 						<span class="visit">Visit <span aria-hidden="true">→</span></span>
 					</a>
-					<a class="roaster-card reveal" href="https://www.baarbaracoffee.com/" target="_blank" rel="noopener"
+					<a class="roaster-card reveal"
+						href="https://www.baarbaracoffee.com/?utm_source=komorebi.coffee&utm_medium=referral&utm_campaign=roasters&utm_content=baarbara_estate"
+						target="_blank" rel="noopener"
 						style="transition-delay:0.2s">
 						<span class="num">04</span>
 						<h3 class="name">Baarbara Estate</h3>
 						<span class="loc">Chikmagalur, Karnataka</span>
 						<span class="visit">Visit <span aria-hidden="true">→</span></span>
 					</a>
-					<a class="roaster-card reveal" href="https://greysoul.coffee/" target="_blank" rel="noopener"
+					<a class="roaster-card reveal"
+						href="https://greysoul.coffee/?utm_source=komorebi.coffee&utm_medium=referral&utm_campaign=roasters&utm_content=grey_soul"
+						target="_blank" rel="noopener"
 						style="transition-delay:0.25s">
 						<span class="num">05</span>
 						<h3 class="name">Grey Soul</h3>
@@ -3619,7 +3667,7 @@
 					<div class="card-foot">
 						<span>100% Arabica</span>
 						<a href="https://link.zomato.com/xqzv/rshare?id=13637493530563260" target="_blank"
-							rel="noopener" class="order-link">On delivery apps <span class="arr">→</span></a>
+							rel="noopener" class="order-link">Order on Zomato <span class="arr">→</span></a>
 					</div>
 				</article>
 
@@ -3639,7 +3687,7 @@
 					<div class="card-foot">
 						<span>strong &amp; sweet</span>
 						<a href="https://link.zomato.com/xqzv/rshare?id=13637493530563260" target="_blank"
-							rel="noopener" class="order-link">On delivery apps <span class="arr">→</span></a>
+							rel="noopener" class="order-link">Order on Zomato <span class="arr">→</span></a>
 					</div>
 				</article>
 
@@ -3659,7 +3707,7 @@
 					<div class="card-foot">
 						<span>100% Arabica</span>
 						<a href="https://link.zomato.com/xqzv/rshare?id=13637493530563260" target="_blank"
-							rel="noopener" class="order-link">On delivery apps <span class="arr">→</span></a>
+							rel="noopener" class="order-link">Order on Zomato <span class="arr">→</span></a>
 					</div>
 				</article>
 
@@ -3679,7 +3727,7 @@
 					<div class="card-foot">
 						<span>biscoff · crumb</span>
 						<a href="https://link.zomato.com/xqzv/rshare?id=13637493530563260" target="_blank"
-							rel="noopener" class="order-link">On delivery apps <span class="arr">→</span></a>
+							rel="noopener" class="order-link">Order on Zomato <span class="arr">→</span></a>
 					</div>
 				</article>
 
@@ -3698,7 +3746,7 @@
 					<div class="card-foot">
 						<span>decoction · hot milk</span>
 						<a href="https://link.zomato.com/xqzv/rshare?id=13637493530563260" target="_blank"
-							rel="noopener" class="order-link">On delivery apps <span class="arr">→</span></a>
+							rel="noopener" class="order-link">Order on Zomato <span class="arr">→</span></a>
 					</div>
 				</article>
 
@@ -3718,7 +3766,7 @@
 					<div class="card-foot">
 						<span>chemex · over ice</span>
 						<a href="https://link.zomato.com/xqzv/rshare?id=13637493530563260" target="_blank"
-							rel="noopener" class="order-link">On delivery apps <span class="arr">→</span></a>
+							rel="noopener" class="order-link">Order on Zomato <span class="arr">→</span></a>
 					</div>
 				</article>
 			</div>
@@ -3733,7 +3781,7 @@
 			</aside>
 
 			<div class="menu-foot">
-				<p>Live prices and availability on the delivery apps.</p>
+				<p>Live prices and availability on Zomato.</p>
 				<a href="https://link.zomato.com/xqzv/rshare?id=13637493530563260" target="_blank" rel="noopener"
 					class="btn btn-primary">Order now <span class="arrow">→</span></a>
 			</div>
@@ -3745,7 +3793,7 @@
 				<div class="reviews-head">
 					<span class="label reveal">customers</span>
 					<h2 class="reveal" style="transition-delay:0.08s">Loved after the <em>first sip.</em></h2>
-					<p class="reviews-sub reveal" style="transition-delay:0.18s">Early notes from customers ordering Komorebi Kaffee on Zomato and Swiggy.</p>
+					<p class="reviews-sub reveal" style="transition-delay:0.18s">Early notes from customers ordering Komorebi Kaffee on Zomato.</p>
 				</div>
 
 				<div class="ratings-strip reveal" style="transition-delay:0.24s">
@@ -3753,12 +3801,6 @@
 						<div class="rating-num">5<em>.0</em></div>
 						<div class="rating-stars" aria-label="5 out of 5 stars">★★★★★</div>
 						<div class="rating-meta">Zomato · early reviews</div>
-					</div>
-					<div class="rating-divider" aria-hidden="true"></div>
-					<div class="rating-block">
-						<div class="rating-num">4<em>.6</em></div>
-						<div class="rating-stars" aria-label="4.6 out of 5 stars">★★★★★</div>
-						<div class="rating-meta">Swiggy · early reviews</div>
 					</div>
 				</div>
 
@@ -3779,7 +3821,7 @@
 						<blockquote>Really loved the quality of the coffee. It's not everyday you meet people who take coffee so seriously.</blockquote>
 						<div class="review-foot">
 							<span class="prod">Vietnamese Cold Coffee · Hemant G.</span>
-							<span class="src"><span class="pin"></span>via Swiggy</span>
+							<span class="src"><span class="pin"></span>customer review</span>
 						</div>
 					</article>
 
@@ -3836,10 +3878,6 @@
 							<figcaption>Shloka · Vietnamese Cold · Zomato</figcaption>
 						</button>
 						<button class="shot" type="button">
-							<img src="assets/reviews/hemant.png" alt="Customer review by Hemant Gupta about Vietnamese Cold Coffee, 5 stars on Swiggy" loading="lazy" decoding="async" />
-							<figcaption>Hemant G. · Vietnamese Cold · Swiggy</figcaption>
-						</button>
-						<button class="shot" type="button">
 							<img src="assets/reviews/mansi.png" alt="Customer review by Mansi Jhamb, 5 stars on Zomato, repeat order" loading="lazy" decoding="async" />
 							<figcaption>Mansi J. · Repeat order · Zomato</figcaption>
 						</button>
@@ -3856,15 +3894,11 @@
 							<figcaption>Nimita · Cold + Vietnamese · Zomato</figcaption>
 						</button>
 						<button class="shot" type="button">
-							<img src="assets/reviews/shoubhik.png" alt="Customer review by Shoubhik Sadhu about Vietnamese Cold Coffee on Swiggy" loading="lazy" decoding="async" />
-							<figcaption>Shoubhik S. · Vietnamese Cold · Swiggy</figcaption>
-						</button>
-						<button class="shot" type="button">
 							<img src="assets/reviews/prince.png" alt="Customer review by Prince Singh, 5 stars on Zomato, great aroma" loading="lazy" decoding="async" />
 							<figcaption>Prince S. · Zomato</figcaption>
 						</button>
 					</div>
-					<p class="originals-disclaimer">Cropped from real Zomato &amp; Swiggy review screens. Customer photos &amp; order IDs hidden.</p>
+					<p class="originals-disclaimer">Cropped from real Zomato review screens. Customer photos &amp; order IDs hidden.</p>
 				</div>
 			</div>
 		</section>
@@ -4010,8 +4044,8 @@
 					</article>
 					<article class="note reveal" style="transition-delay:0.4s">
 						<div class="note-date">Limited</div>
-						<h3 class="note-title">Offers live on delivery apps</h3>
-						<p class="note-body">Time-bound combos and discounts directly on Zomato and Swiggy.</p>
+						<h3 class="note-title">Zomato offers live now</h3>
+						<p class="note-body">Time-bound combos and discounts directly on Zomato.</p>
 					</article>
 				</div>
 			</div>
@@ -4023,8 +4057,7 @@
 				<div class="order-head">
 					<span class="label">order &amp; follow</span>
 					<h2>Where to find <em>us.</em></h2>
-					<p class="small">Order through your favourite app, follow along on Instagram, or drop us a pin on
-						the map.</p>
+					<p class="small">Order through Zomato, follow along on Instagram, or drop us a pin on the map.</p>
 				</div>
 
 				<div class="order-grid">
@@ -4039,21 +4072,6 @@
 						</span>
 						<div class="sub">delivery</div>
 						<div class="name">Zomato</div>
-						<div class="arrow-row"><span>Order now</span><span class="arr">→</span></div>
-					</a>
-
-					<a class="order-card"
-						href="https://www.swiggy.com/direct/brand/777490?source=swiggy-direct&subSource=google"
-						target="_blank" rel="noopener">
-						<span class="icon-wrap">
-							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
-								stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-								<path d="M5 11a7 7 0 0 1 14 0v3l2 4H3l2-4v-3z" />
-								<path d="M9 18a3 3 0 0 0 6 0" />
-							</svg>
-						</span>
-						<div class="sub">delivery</div>
-						<div class="name">Swiggy</div>
 						<div class="arrow-row"><span>Order now</span><span class="arr">→</span></div>
 					</a>
 
@@ -4099,18 +4117,19 @@
 				<div class="seo-copy">
 					<p class="reveal" style="transition-delay:0.12s">
 						Made fresh in Sector 71, Noida. Available for delivery across serviceable areas in Noida through
-						Zomato and Swiggy — built for people looking for café-style iced coffee at home.
+						Zomato — built for people looking for café-style iced coffee at home.
 					</p>
 
 					<p class="reveal" style="transition-delay:0.16s">
-						Quick answers for ordering Komorebi Kaffee on Zomato or Swiggy. Live prices, discounts, delivery
-						time, and availability are shown directly on the delivery apps.
+						Quick answers for ordering Komorebi Kaffee on Zomato. Live prices, discounts, delivery
+						time, and availability are shown directly on Zomato.
 					</p>
 
 					<ul class="reveal" style="transition-delay:0.18s">
-						<li><strong>Order:</strong> Available on Zomato and Swiggy.</li>
+						<li><strong>Order:</strong> Available on Zomato.</li>
 						<li><strong>Service area:</strong> Delivery-only across serviceable areas in Noida (kitchen in
 							Sector 71).</li>
+						<li><strong>New address:</strong> Relocating from Sector 26 to Sector 71, Noida.</li>
 						<li><strong>Coffee:</strong> 100% Arabica, made fresh, no premix.</li>
 						<li><strong>Menu focus:</strong> cold coffee, iced americano, Vietnamese coffee, filter coffee,
 							iced pour
@@ -4122,8 +4141,7 @@
 					<div class="faq-list reveal" style="transition-delay:0.24s">
 						<details>
 							<summary>Where does Komorebi Kaffee deliver?</summary>
-							<p>Komorebi Kaffee is delivery-only in Noida. Delivery availability depends on Zomato and
-								Swiggy
+							<p>Komorebi Kaffee is delivery-only in Noida. Delivery availability depends on Zomato
 								serviceability at the time of ordering.</p>
 						</details>
 
@@ -4135,21 +4153,14 @@
 
 						<details>
 							<summary>How can I order Komorebi Kaffee?</summary>
-							<p>You can order through the Zomato and Swiggy links on this website. Current prices and
-								offers are shown
-								on the delivery apps.</p>
+							<p>You can order through the Zomato link on this website. Current prices and offers are
+								shown on the delivery app.</p>
 						</details>
 
 						<details>
 							<summary>Is Komorebi Kaffee available on Zomato?</summary>
 							<p>Yes. Komorebi Kaffee is live on Zomato for delivery across serviceable areas in Noida.
 								Live prices, offers, and delivery time are shown on the Zomato listing.</p>
-						</details>
-
-						<details>
-							<summary>Is Komorebi Kaffee available on Swiggy?</summary>
-							<p>Yes. Komorebi Kaffee is also live on Swiggy. Availability depends on Swiggy
-								serviceability in your area at the time of ordering.</p>
 						</details>
 
 						<details>
@@ -4161,8 +4172,7 @@
 
 						<details>
 							<summary>Where can I see the full menu?</summary>
-							<p>The core menu is listed above on this page. Final item availability may vary on Zomato
-								and Swiggy.</p>
+							<p>The core menu is listed above on this page. Final item availability may vary on Zomato.</p>
 						</details>
 					</div>
 				</div>
@@ -4187,8 +4197,6 @@
 				<ul>
 					<li><a href="https://link.zomato.com/xqzv/rshare?id=13637493530563260" target="_blank"
 							rel="noopener">Zomato</a></li>
-					<li><a href="https://www.swiggy.com/direct/brand/777490?source=swiggy-direct&subSource=google"
-							target="_blank" rel="noopener">Swiggy</a></li>
 				</ul>
 			</div>
 
