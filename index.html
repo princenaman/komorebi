@@ -80,6 +80,7 @@
       "description": "Komorebi Kaffee is a delivery-only café in Noida serving café-style coffee made fresh with 100% Arabica coffee and no premix.",
       "servesCuisine": ["Coffee", "Beverages"],
       "priceRange": "₹₹",
+	  "telephone": "+919680971075",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Sector 71",
@@ -88,6 +89,13 @@
         "postalCode": "201316",
         "addressCountry": "IN"
       },
+	  "contactPoint": {
+		"@type": "ContactPoint",
+		"telephone": "+919680971075",
+		"contactType": "orders",
+		"areaServed": "Noida",
+		"availableLanguage": ["en", "hi"]
+	  },
       "geo": {
         "@type": "GeoCoordinates",
         "latitude": 28.5972146,
@@ -106,15 +114,19 @@
         "closes": "23:00"
       }],
       "sameAs": [
-        "https://instagram.com/komorebikaffee",
-        "https://maps.app.goo.gl/2NtCbFMWKdUM2MTc6",
-        "https://link.zomato.com/xqzv/rshare?id=13637493530563260"
+		"https://instagram.com/komorebikaffee",
+		"https://maps.app.goo.gl/2NtCbFMWKdUM2MTc6",
+		"https://link.zomato.com/xqzv/rshare?id=13637493530563260"
       ],
       "potentialAction": [
-        {
-          "@type": "OrderAction",
-          "target": "https://link.zomato.com/xqzv/rshare?id=13637493530563260"
-        }
+		{
+			"@type": "OrderAction",
+			"target": "https://link.zomato.com/xqzv/rshare?id=13637493530563260"
+		},
+		{
+			"@type": "OrderAction",
+			"target": "https://wa.me/919680971075?text=Hi%20Komorebi%20Kaffee%2C%20I%27d%20like%20to%20place%20a%20direct%20order."
+		}
       ]
     },
     {
@@ -138,8 +150,8 @@
             },
             {
               "@type": "MenuItem",
-              "name": "Biscoff Cold Coffee",
-              "description": "Iced coffee blended with Lotus Biscoff spread and topped with crushed Biscoff cookies."
+              "name": "Cookie Butter Iced Latte",
+              "description": "Single-origin arabica coffee shaken with chilled milk and our in-house cookie butter syrup made with Lotus Biscoff spread, cinnamon, vanilla, and sugar. Sweet, creamy, lightly spiced, and served with Biscoff crumble on the side for fresh crunch."
             }
           ]
         },
@@ -208,9 +220,17 @@
           "name": "How can I order Komorebi Kaffee?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You can order Komorebi Kaffee on Zomato from the order links on the website."
+          	"text": "You can order Komorebi Kaffee on Zomato from the order links on the website. For nearby direct orders, repeat orders, or bulk coffee, message us on WhatsApp. Availability depends on prep time and delivery distance."
           }
         },
+		{
+			"@type": "Question",
+			"name": "Does Komorebi Kaffee take direct home delivery orders?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "Yes. Direct home delivery may be available for nearby areas, repeat orders, and bulk coffee orders through WhatsApp, depending on prep time and delivery distance. For fastest delivery, please order on Zomato."
+			}
+		},
         {
           "@type": "Question",
           "name": "Is Komorebi Kaffee available on Zomato?",
@@ -2698,7 +2718,7 @@
 
 		.order-grid {
 			display: grid;
-			grid-template-columns: repeat(3, 1fr);
+			grid-template-columns: repeat(4, 1fr);
 			gap: 16px;
 		}
 
@@ -2829,6 +2849,16 @@
 		.order-card:hover .arrow-row .arr {
 			transform: translate(4px, -4px);
 		}
+
+        .order-card.secondary {
+            background: rgba(232, 220, 196, 0.035);
+            border-style: dashed;
+        }
+
+        .order-card.secondary .sub {
+            line-height: 1.45;
+            letter-spacing: 0.12em;
+        }
 
 		/* ───────────────────────────────────────────
       FAQ / ORDER INFO — visible crawler-friendly support section
@@ -4075,6 +4105,18 @@
 						<div class="arrow-row"><span>Order now</span><span class="arr">→</span></div>
 					</a>
 
+					<a href="https://wa.me/919680971075?text=Hi%20Komorebi%20Kaffee%2C%20I%27d%20like%20to%20place%20a%20direct%20order." target="_blank" rel="noopener" class="order-card secondary">
+						<span class="icon-wrap" aria-hidden="true">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M20.5 11.8a8.5 8.5 0 0 1-12.6 7.4L4 20l.9-3.7A8.5 8.5 0 1 1 20.5 11.8Z" />
+								<path d="M8.8 8.9c.2-.5.4-.5.7-.5h.5c.2 0 .4 0 .6.4.2.5.7 1.7.8 1.8.1.2.1.4 0 .6-.2.3-.3.4-.5.6-.2.2-.3.3-.1.6.2.3.8 1.3 1.8 2.1 1.2.9 2.1 1.2 2.4 1.4.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.3.7-.2.3.1 1.8.9 2.1 1 .3.2.5.3.6.4.1.2.1 1-.2 1.5-.3.5-1.5 1.3-2.1 1.4-.6.1-1.4.1-2.3-.2-.5-.2-1.2-.4-2.1-.9-3.7-1.6-6.1-5.3-6.3-5.5-.2-.2-1.5-2-1.5-3.7 0-1.8.9-2.6 1.2-2.9Z" />
+							</svg>
+						</span>
+						<span class="sub">Direct · repeat · bulk orders</span>
+						<span class="name">WhatsApp <em>Direct</em></span>
+						<span class="arrow-row">Message us <span class="arr">→</span></span>
+					</a>
+
 					<a class="order-card" href="https://instagram.com/komorebikaffee" target="_blank" rel="noopener">
 						<span class="icon-wrap">
 							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
@@ -4153,8 +4195,12 @@
 
 						<details>
 							<summary>How can I order Komorebi Kaffee?</summary>
-							<p>You can order through the Zomato link on this website. Current prices and offers are
-								shown on the delivery app.</p>
+							<p>You can order on Zomato for the fastest delivery. For nearby direct orders, repeat orders, or bulk coffee, message us on WhatsApp and we’ll confirm availability based on prep time and delivery distance.</p>
+						</details>
+
+						<details>
+							<summary>Do you take direct home delivery orders?</summary>
+							<p>Yes, selectively. Direct delivery is available in nearby areas only, subject to availability. For fastest delivery and live tracking, Zomato is still the best option.</p>
 						</details>
 
 						<details>
@@ -4197,6 +4243,7 @@
 				<ul>
 					<li><a href="https://link.zomato.com/xqzv/rshare?id=13637493530563260" target="_blank"
 							rel="noopener">Zomato</a></li>
+					<li><a href="https://wa.me/919680971075?text=Hi%20Komorebi%20Kaffee%2C%20I%27d%20like%20to%20place%20a%20direct%20order." target="_blank" rel="noopener">WhatsApp Direct</a></li>
 				</ul>
 			</div>
 
