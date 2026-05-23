@@ -1,0 +1,39 @@
+{
+  "ucp": {
+    "version": "2026-04-08",
+    "services": {},
+    "capabilities": {},
+    "payment_handlers": {}
+  },
+  "merchant": {
+    "name": "Komorebi Kaffee",
+    "url": "https://komorebi.coffee/",
+    "logo": "https://komorebi.coffee/assets/komorebi-logo.png",
+    "category": "food.coffee",
+    "address": {
+      "locality": "Sector 71, Noida",
+      "region": "Uttar Pradesh",
+      "country": "IN"
+    },
+    "contact": {
+      "phone": "+919680971075",
+      "whatsapp": "https://wa.me/919680971075"
+    }
+  },
+  "fulfillment_partners": [
+    {
+      "name": "Zomato",
+      "type": "delivery_aggregator",
+      "url": "https://link.zomato.com/xqzv/rshare?id=13637493530563260",
+      "area_served": "Noida, India"
+    },
+    {
+      "name": "WhatsApp Direct",
+      "type": "direct_messaging",
+      "url": "https://wa.me/919680971075",
+      "area_served": "Noida (nearby), India",
+      "notes": "Direct delivery for nearby, repeat, and bulk orders. Subject to prep time and distance."
+    }
+  ],
+  "notes": "Komorebi Kaffee is a delivery-only coffee studio. Agent-direct UCP checkout is not yet supported; orders are fulfilled by the listed partners. This profile is published as a forward-compatibility marker per the UCP 2026-04-08 specification. Custom extensions (merchant, fulfillment_partners, notes) are not part of the official UCP spec and may be ignored by strict parsers."
+}
