@@ -15,13 +15,29 @@ Komorebi Kaffee is a delivery-only coffee studio in Sector 71, Noida, India.
 
 ## Menu
 
-- Classic Cold Coffee
-- Vietnamese Cold Coffee
-- Iced Americano
+### Limited Drop
+- Strawberry Matcha Latte — ceremonial-grade matcha from Japan with chilled strawberry milk
+- Vanilla Matcha Latte
+- Chill Duo Combo — 1 Strawberry Matcha Latte + 1 Iced Spanish Latte
+
+### World Cup Specials
+- Iced Spanish Latte
+- Japanese Iced Coffee
+- Cold Brew Concentrate (120 ml, makes 2 iced coffees)
 - Dirty Cola — cold brew coffee soda with Coca-Cola and ice, served DIY-style
-- South Indian Filter Coffee
+
+### Cold Coffee
+- Iced Latte (100% Arabica)
+- Vietnamese Cold Coffee
+- Vanilla Iced Coffee
+- Cold Brew
+- Iced Americano
 - Iced Pour Over
-- Surprise Brews (rotating)
+- Iced Coffee For Two
+
+### Hot Coffee
+- Americano (Black Coffee)
+- Pour Over
 
 ## Brand positioning
 
