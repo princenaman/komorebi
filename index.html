@@ -35,18 +35,18 @@
 	<meta property="og:description"
 		content="Delivery-only café-style coffee in Noida. 100% Arabica, no premix, made fresh to order. Order on Zomato." />
 	<meta property="og:url" content="https://komorebi.coffee/" />
-	<meta property="og:image" content="https://komorebi.coffee/assets/hero-cold-coffee.png" />
+	<meta property="og:image" content="https://komorebi.coffee/assets/hero-iced-coffee.jpg" />
 	<meta property="og:image:alt"
-		content="Komorebi Kaffee classic cold coffee with condensation and warm morning light" />
+		content="Komorebi Kaffee iced coffee in warm sunlight through green leaves" />
 	<meta property="og:locale" content="en_IN" />
 
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="Komorebi Kaffee Noida | 100% Arabica Coffee Delivery" />
 	<meta name="twitter:description"
 		content="Delivery-only café-style coffee in Noida. 100% Arabica, no premix, made fresh to order." />
-	<meta name="twitter:image" content="https://komorebi.coffee/assets/hero-cold-coffee.png" />
+	<meta name="twitter:image" content="https://komorebi.coffee/assets/hero-iced-coffee.jpg" />
 	<meta name="twitter:image:alt"
-		content="Komorebi Kaffee classic cold coffee with condensation and warm morning light" />
+		content="Komorebi Kaffee iced coffee in warm sunlight through green leaves" />
 	<meta name="theme-color" content="#F4EBDC" />
 
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -76,7 +76,7 @@
       "@id": "https://komorebi.coffee/#localbusiness",
       "name": "Komorebi Kaffee",
       "url": "https://komorebi.coffee/",
-      "image": "https://komorebi.coffee/assets/hero-cold-coffee.png",
+      "image": "https://komorebi.coffee/assets/hero-iced-coffee.jpg",
       "logo": "https://komorebi.coffee/assets/komorebi-logo.png",
       "description": "Komorebi Kaffee is a delivery-only café in Noida serving café-style coffee made fresh with 100% Arabica coffee and no premix.",
       "servesCuisine": ["Coffee", "Beverages"],
@@ -209,7 +209,7 @@
               "@type": "MenuItem",
               "name": "Vietnamese Cold Coffee",
               "description": "No premix, no instant. Single-origin Arabica coffee over sweet condensed milk and ice. Strong, sweet, and built for Indian summer deliveries.",
-              "image": "https://komorebi.coffee/assets/menu-vietnamese.png",
+              "image": "https://komorebi.coffee/assets/menu-vietnamese-real.jpg",
               "offers": {
                 "@type": "Offer",
                 "url": "https://link.zomato.com/xqzv/rshare?id=13637493530563260",
@@ -254,7 +254,7 @@
               "@type": "MenuItem",
               "name": "Iced Americano",
               "description": "No premix, no instant. Freshly brewed 100% Arabica with a double shot of fresh espresso over ice and chilled water. Clean, bold, and dairy-free.",
-              "image": "https://komorebi.coffee/assets/menu-iced-americano.png",
+              "image": "https://komorebi.coffee/assets/menu-iced-americano.jpg",
               "offers": {
                 "@type": "Offer",
                 "url": "https://link.zomato.com/xqzv/rshare?id=13637493530563260",
@@ -909,13 +909,13 @@
 		}
 
 		.tv-bar .title {
-			font: 700 11px 'Space Mono', monospace;
+			font: 700 12.5px 'Space Mono', monospace;
 			letter-spacing: .14em;
 			color: #2E1B0E;
 		}
 
 		.tv-bar .counter {
-			font: 700 11px 'Space Mono', monospace;
+			font: 700 12.5px 'Space Mono', monospace;
 			letter-spacing: .14em;
 			color: #A85B2A;
 		}
@@ -928,6 +928,7 @@
 		.tv-stage {
 			position: relative;
 			min-height: 300px;
+			aspect-ratio: 1 / 1;
 			background: #EFE3CE;
 			border-bottom: 1.5px solid #2E1B0E;
 		}
@@ -937,6 +938,7 @@
 			inset: 0;
 			background-size: cover;
 			background-position: center;
+			background-repeat: no-repeat;
 			opacity: 0;
 			transition: opacity .45s ease;
 		}
@@ -962,34 +964,34 @@
 
 		.tv-chip-name {
 			position: absolute;
-			left: 14px;
-			bottom: 14px;
+			left: 16px;
+			bottom: 16px;
 			background: #2E1B0E;
 			color: #F4EBDC;
 			border-radius: 999px;
-			padding: 10px 18px;
-			font: 600 14px Archivo, sans-serif;
+			padding: 12px 22px;
+			font: 600 16px Archivo, sans-serif;
 		}
 
 		.tv-chip-tag {
 			position: absolute;
-			right: 14px;
-			bottom: 14px;
+			right: 16px;
+			bottom: 16px;
 			background: #F4EBDC;
 			color: #2E1B0E;
 			border: 1px solid #2E1B0E;
 			border-radius: 999px;
-			padding: 9px 14px;
-			font: 700 10px 'Space Mono', monospace;
+			padding: 11px 16px;
+			font: 700 11px 'Space Mono', monospace;
 			letter-spacing: .08em;
 			text-transform: uppercase;
 		}
 
 		.tv-rows {
-			padding: 12px 10px;
+			padding: 18px 16px;
 			display: flex;
 			flex-direction: column;
-			gap: 3px;
+			gap: 8px;
 			justify-content: center;
 		}
 
@@ -998,8 +1000,8 @@
 			align-items: center;
 			justify-content: space-between;
 			gap: 12px;
-			padding: 11px 14px;
-			border-radius: 10px;
+			padding: 16px 20px;
+			border-radius: 12px;
 			cursor: pointer;
 			transition: background .45s ease;
 			background: none;
@@ -1021,7 +1023,7 @@
 		}
 
 		.tv-row-name {
-			font: 600 15px Archivo, sans-serif;
+			font: 600 clamp(16px, 1.5vw, 20px) Archivo, sans-serif;
 			color: #2E1B0E;
 			white-space: nowrap;
 			overflow: hidden;
@@ -1034,7 +1036,7 @@
 		}
 
 		.tv-row-desc {
-			font: 400 11.5px Archivo, sans-serif;
+			font: 400 clamp(12.5px, 1.1vw, 14.5px) Archivo, sans-serif;
 			color: rgba(58, 42, 27, .55);
 			white-space: nowrap;
 			overflow: hidden;
@@ -1047,7 +1049,7 @@
 		}
 
 		.tv-row-dot {
-			font-size: 9px;
+			font-size: 11px;
 			flex: none;
 			color: rgba(58, 42, 27, .2);
 			transition: color .45s ease;
@@ -1070,13 +1072,13 @@
 		}
 
 		.tv-foot .live {
-			font: 700 10.5px 'Space Mono', monospace;
+			font: 700 11.5px 'Space Mono', monospace;
 			letter-spacing: .12em;
 			color: rgba(46, 27, 14, .65);
 		}
 
 		.tv-foot .go {
-			font: 700 13.5px Archivo, sans-serif;
+			font: 700 15px Archivo, sans-serif;
 			color: #A85B2A;
 		}
 
@@ -1537,8 +1539,8 @@
 					</div>
 				</div>
 				<div class="hero-visual">
-					<img src="assets/hero-cold-coffee.png"
-						alt="Classic cold coffee, condensation on the cup, espresso machine in warm light" />
+					<img src="assets/hero-iced-coffee.jpg"
+						alt="Iced black coffee in a Komorebi cup on a granite ledge, warm sunlight through green leaves" />
 					<div class="hero-badge">NO PREMIX · EVER</div>
 				</div>
 			</div>
@@ -1597,18 +1599,18 @@
 				</div>
 				<div class="tv-body">
 					<div class="tv-stage" id="tv-stage" role="img" aria-label="Iced Latte">
-						<div class="tv-shot on" data-layer style="background-image:url('assets/menu-iced-latte.jpg')">
+						<div class="tv-shot on" data-layer style="background-image:url('assets/tv-iced-latte.jpg')">
 						</div>
-						<div class="tv-shot" data-layer style="background-image:url('assets/menu-vietnamese.png')">
-						</div>
-						<div class="tv-shot" data-layer
-							style="background-image:url('assets/menu-strawberry-matcha.jpg')"></div>
-						<div class="tv-shot" data-layer style="background-image:url('assets/menu-dirty-cola.jpg')">
-						</div>
-						<div class="tv-shot" data-layer style="background-image:url('assets/menu-iced-americano.png')">
+						<div class="tv-shot" data-layer style="background-image:url('assets/tv-vietnamese.jpg')">
 						</div>
 						<div class="tv-shot" data-layer
-							style="background-image:url('assets/menu-iced-pour-over.jpg')"></div>
+							style="background-image:url('assets/tv-strawberry-matcha.jpg')"></div>
+						<div class="tv-shot" data-layer style="background-image:url('assets/tv-iced-americano.jpg')">
+						</div>
+						<div class="tv-shot" data-layer
+							style="background-image:url('assets/tv-spanish-latte.jpg')"></div>
+						<div class="tv-shot" data-layer
+							style="background-image:url('assets/tv-iced-pour-over.jpg')"></div>
 						<div class="tv-chip-name" id="tv-name">Iced Latte</div>
 						<div class="tv-chip-tag" id="tv-tag">100% arabica</div>
 					</div>
@@ -1636,17 +1638,18 @@
 							</span>
 							<span class="tv-row-dot" aria-hidden="true">●</span>
 						</button>
-						<button type="button" class="tv-row" data-name="Dirty Cola" data-tag="cold brew soda">
-							<span class="tv-row-text">
-								<span class="tv-row-name">Dirty Cola</span>
-								<span class="tv-row-desc">cold brew · coca-cola · DIY pour</span>
-							</span>
-							<span class="tv-row-dot" aria-hidden="true">●</span>
-						</button>
 						<button type="button" class="tv-row" data-name="Iced Americano" data-tag="dairy-free">
 							<span class="tv-row-text">
 								<span class="tv-row-name">Iced Americano</span>
 								<span class="tv-row-desc">double shot · chilled water · clean</span>
+							</span>
+							<span class="tv-row-dot" aria-hidden="true">●</span>
+						</button>
+						<button type="button" class="tv-row" data-name="Iced Spanish Latte"
+							data-tag="chill duo combo">
+							<span class="tv-row-text">
+								<span class="tv-row-name">Iced Spanish Latte</span>
+								<span class="tv-row-desc">cold brew latte · condensed milk · creamy</span>
 							</span>
 							<span class="tv-row-dot" aria-hidden="true">●</span>
 						</button>
@@ -1714,7 +1717,7 @@
 					<span class="score">4.5</span>
 					<div class="meta">
 						<span class="stars" aria-hidden="true">★★★★★</span>
-						<span class="src">zomato · 133 delivery ratings</span>
+						<span class="src">zomato · 100+ delivery ratings</span>
 					</div>
 				</div>
 			</div>
@@ -1749,7 +1752,7 @@
 				<div class="surprise-copy">
 					<div class="kicker">on rotation · the limited drop</div>
 					<div class="title">Strawberry Matcha <em>Latte.</em></div>
-					<p>Ceremonial-grade matcha from Japan over chilled strawberry milk. Real matcha, real fruit, no
+					<p>Ceremonial-grade matcha from Japan over chilled strawberry milk made with strawberry crush. Real matcha, no
 						premix — with a Vanilla Matcha Latte and a Chill Duo Combo alongside. While it lasts.</p>
 					<a href="https://link.zomato.com/xqzv/rshare?id=13637493530563260" target="_blank"
 						rel="noopener">Order the limited drop → on Zomato</a>
