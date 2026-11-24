@@ -1,43 +1,42 @@
 # Komorebi Kaffee
 
-Komorebi Kaffee is a delivery-only coffee studio in Sector 71, Noida, India.
+Komorebi Kaffee is a delivery-only coffee studio in Sector 70, Noida, India.
 
-## Key facts
+## Ordering
 
-- Serves café-style coffee through Zomato
-- Direct delivery for nearby, repeat, and bulk orders via WhatsApp (+91 96809 71075)
-- Uses 100% Arabica coffee
-- Does not use premix or instant coffee
-- Delivery-only in Noida (kitchen in Sector 71)
-- Instagram: https://instagram.com/komorebikaffee
-- Google Maps: https://maps.app.goo.gl/2NtCbFMWKdUM2MTc6
-- Zomato: https://link.zomato.com/xqzv/rshare?id=13637493530563260
+- Order in the [Ownly app](https://ownly.food/app/brand/BR465722) for delivery in Noida.
+- For nearby, repeat, and bulk orders, message [WhatsApp](https://wa.me/919680971075) (+91 96809 71075).
+- [Sector 70, Noida on Google Maps](https://www.google.com/maps/search/?api=1&query=Sector+70%2C+Noida)
+- [Komorebi Kaffee on Instagram](https://instagram.com/komorebikaffee)
 
 ## Menu
 
-### Limited Drop
-- Strawberry Matcha Latte — ceremonial-grade matcha from Japan with chilled strawberry milk
-- Vanilla Matcha Latte
-- Chill Duo Combo — 1 Strawberry Matcha Latte + 1 Iced Spanish Latte
-
-### World Cup Specials
-- Iced Spanish Latte
-- Japanese Iced Coffee
-- Cold Brew Concentrate (120 ml, makes 2 iced coffees)
-- Dirty Cola — cold brew coffee soda with Coca-Cola and ice, served DIY-style
+Check the Ownly app for current prices and availability. Komorebi Kaffee brews with 100% Arabica coffee and uses no premix or instant coffee.
 
 ### Cold Coffee
-- Iced Latte (100% Arabica)
-- Vietnamese Cold Coffee
-- Vanilla Iced Coffee
-- Cold Brew
-- Iced Americano
-- Iced Pour Over
-- Iced Coffee For Two
 
-### Hot Coffee
-- Americano (Black Coffee)
-- Pour Over
+- Iced Pour Over Coffee — ₹204.77
+- Iced Americano | 100% Arabica — ₹152.39
+- Cold Brew — ₹190.48
+- Japanese Iced Coffee — ₹204.77
+- Hazelnut Iced Coffee — ₹180.96
+- Iced Spanish Latte — ₹190.48
+- Vietnamese Cold Coffee | Strong & Sweet — ₹219.05
+- Iced Latte | 100% Arabica — ₹157.15
+- Vanilla Iced Coffee — ₹180.96
+- Cranberry Cold Brew — ₹214.29
+
+### Bestseller Combos
+
+- Bestseller Duo — ₹361.91
+- Smooth & Bold Duo — ₹285.72
+- Spanish Latte + Strawberry Matcha Duo — ₹409.53
+
+### Matcha
+
+- Blueberry Matcha Latte — ₹253.34
+- Strawberry Matcha Latte — ₹238.10
+- Vanilla Matcha Latte — ₹238.10
 
 ## Brand positioning
 
